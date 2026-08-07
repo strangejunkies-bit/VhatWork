@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://freshworkfactory.com/</loc>
@@ -33,6 +33,18 @@
     <image:image>
       <image:loc>https://freshworkfactory.com/assets/images/vehicle-wrap-before.webp</image:loc>
       <image:title>Commercial van before Fresh Work Factory vehicle wrap</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://freshworkfactory.com/assets/images/work/castillo-flooring-business-cards.webp</image:loc>
+      <image:title>Fresh Work Factory flooring business cards</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://freshworkfactory.com/assets/images/work/lawn-care-business-cards.webp</image:loc>
+      <image:title>Fresh Work Factory lawn care business cards</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://freshworkfactory.com/assets/images/work/bakery-business-card.webp</image:loc>
+      <image:title>Fresh Work Factory bakery business card</image:title>
     </image:image>
   </url>
   <url>
@@ -252,6 +264,18 @@
       <image:loc>https://freshworkfactory.com/assets/images/work/restaurant-menu-printing.webp</image:loc>
       <image:title>Fresh Work Factory restaurant menu printing</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://freshworkfactory.com/assets/images/work/castillo-flooring-business-cards.webp</image:loc>
+      <image:title>Fresh Work Factory flooring business cards</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://freshworkfactory.com/assets/images/work/lawn-care-business-cards.webp</image:loc>
+      <image:title>Fresh Work Factory lawn care business cards</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://freshworkfactory.com/assets/images/work/bakery-business-card.webp</image:loc>
+      <image:title>Fresh Work Factory bakery business card</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://freshworkfactory.com/about-us/</loc>
@@ -328,6 +352,22 @@
     <image:image>
       <image:loc>https://freshworkfactory.com/assets/images/work/restaurant-pizza-box-printing.webp</image:loc>
       <image:title>Fresh Work Factory business card printing project</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://freshworkfactory.com/assets/images/work/premium-business-cards.webp</image:loc>
+      <image:title>Fresh Work Factory garage door service business card</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://freshworkfactory.com/assets/images/work/castillo-flooring-business-cards.webp</image:loc>
+      <image:title>Fresh Work Factory flooring business cards</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://freshworkfactory.com/assets/images/work/lawn-care-business-cards.webp</image:loc>
+      <image:title>Fresh Work Factory lawn care business cards</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://freshworkfactory.com/assets/images/work/bakery-business-card.webp</image:loc>
+      <image:title>Fresh Work Factory bakery business card</image:title>
     </image:image>
   </url>
   <url>
