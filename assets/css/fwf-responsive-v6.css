@@ -1,0 +1,16 @@
+
+@media(max-width:1320px){.desktop-nav>a,.nav-item>a{font-size:.72rem;padding:0 .38rem}.desktop-nav>a:after,.nav-item>a:after{left:.38rem;right:.38rem}.brand{min-width:190px}.brand-wordmark{font-size:.94rem}}
+@media(max-width:1180px){.desktop-nav{display:none}.menu-toggle{display:block}.header-quote{margin-left:auto}.mobile-nav.open{display:block}.brand{min-width:auto}.home-hero{grid-template-columns:1fr minmax(430px,48%)}.home-hero-copy{grid-column:2;padding-right:34px}.work-rail{grid-auto-columns:minmax(300px,45%)}.portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){.home-hero{display:flex;flex-direction:column;min-height:0;background:#080808}.home-hero-media{position:relative;height:min(66vw,520px)}.home-hero-media img{object-position:36% 34%}.home-hero-media:after{background:linear-gradient(0deg,rgba(0,0,0,.6),transparent 46%)}.home-hero-copy{padding:34px 22px 44px;display:block}.home-hero h1{font-size:clamp(3.2rem,10.5vw,5.4rem)}.home-work{padding:62px 0}.home-work-head,.ba-header,.portfolio-controls{grid-template-columns:1fr;display:grid;gap:18px}.work-rail{grid-auto-columns:minmax(290px,64%)}.ba-section{padding:62px 0}.ba-img{min-height:300px}.ba-after-wrap img{width:calc(100vw - 44px)}.design-proof .work-rail{grid-auto-columns:minmax(280px,55%)}.page-hero{padding:90px 22px 58px}}
+@media(max-width:620px){.header-inner{height:64px;padding:0 14px}.brand-mark{width:36px!important;height:36px!important}.brand-wordmark{font-size:.86rem}.header-quote{display:none}.mobile-nav{max-height:calc(100vh - 64px)}.home-hero-media{height:72vw;min-height:300px}.home-hero-copy{padding:28px 18px 36px}.home-hero h1{font-size:clamp(2.9rem,13vw,4.35rem)}.home-hero-lede{font-size:.95rem}.home-hero-actions .btn{width:100%}.home-work .section-inner,.ba-inner{padding-left:18px;padding-right:18px}.work-rail{grid-auto-columns:84%}.rail-actions{justify-content:flex-start}.home-work-footer{align-items:flex-start;flex-direction:column}.ba-after-wrap img{width:calc(100vw - 36px)}.ba-img{min-height:245px}.ba-handle-btn{width:44px;height:44px}.portfolio-grid{grid-template-columns:1fr}.portfolio-filter{padding-right:10px;margin-right:10px}.design-proof .work-rail{grid-auto-columns:84%}.page-hero{padding:82px 18px 50px}.page-hero h1{font-size:clamp(2.8rem,13vw,4.4rem)}.footer-grid{grid-template-columns:1fr}}
+
+@media(max-width:700px){
+  .option-groups.single-group .option-list{grid-template-columns:1fr}
+  .faq summary{padding:18px 0;font-size:.96rem;gap:16px}
+  .faq details>p{padding:0 42px 20px 0}
+}
+
+
+/* v6 project grids continue down the page instead of scrolling sideways. */
+@media(max-width:900px){.work-rail{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.work-rail{grid-template-columns:1fr;gap:12px}}
