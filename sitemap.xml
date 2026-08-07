@@ -54,4 +54,10 @@
   <url><loc>https://freshworkfactory.com/services/web/seo-services/</loc><lastmod>2026-08-07</lastmod></url>
   <url><loc>https://freshworkfactory.com/services/web/web-design-features/</loc><lastmod>2026-08-07</lastmod></url>
   <url><loc>https://freshworkfactory.com/services/web/website-types/</loc><lastmod>2026-08-07</lastmod></url>
+  <url>
+    <loc>https://freshworkfactory.com/services/printing/school-college-printing/</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
