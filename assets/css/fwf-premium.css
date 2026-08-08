@@ -248,7 +248,7 @@ html{scrollbar-color:var(--gold) #111;scrollbar-width:thin}
 @keyframes bcFloatFour{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-9px) rotate(-2.6deg)}}
 
 
-/* Homepage business-card production feature */
+
 .bc-print-feature{background:#080809;color:#fff;padding:42px 0;border-top:1px solid #1c1d20;border-bottom:1px solid #1c1d20}
 .bc-print-grid{display:grid;grid-template-columns:minmax(285px,.7fr) minmax(500px,1.3fr);align-items:stretch;border:1px solid #1d1e21;background:#09090a;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.18)}
 .bc-print-copy{padding:34px 34px 32px;border-right:1px solid #1d1e21;display:flex;flex-direction:column;justify-content:center;min-width:0}
@@ -380,3 +380,39 @@ html{scrollbar-color:var(--gold) #111;scrollbar-width:thin}
 @keyframes bcCardFlipFinal{0%,59%{transform:rotateY(0deg)}68%,79%{transform:rotateY(180deg)}88%,100%{transform:rotateY(360deg)}}
 @keyframes bcFrontGlossFinal{0%,43%{opacity:0;transform:translateX(-120%)}48%{opacity:1}56%{opacity:1;transform:translateX(120%)}100%{opacity:0;transform:translateX(120%)}}
 @keyframes bcBackGlossFinal{0%,69%{opacity:0;transform:translateX(-120%)}73%{opacity:1}80%{opacity:1;transform:translateX(120%)}100%{opacity:0;transform:translateX(120%)}}
+
+
+
+.bc-carriage,.bc-stock,.bc-scan,.bc-card{animation-duration:14s}
+.bc-card{animation-name:bcPrintCardV18,bcCardFlipV18;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite}
+.bc-front:before{animation:bcFrontGlossV18 14s ease-in-out infinite}
+.bc-back{background:#f3ede1;border-color:rgba(255,255,255,.24)}
+.bc-back:before,.bc-back:after{display:none}
+.bc-back-blank{position:absolute;inset:0;background:linear-gradient(145deg,#fbf8f1,#ebe2d4);box-shadow:inset 0 1px rgba(255,255,255,.65),inset 0 -1px rgba(118,105,82,.14)}
+.bc-back-art{position:absolute;inset:0;overflow:hidden;opacity:0;clip-path:inset(0 100% 0 0);background:radial-gradient(circle at 0 0,rgba(246,171,29,.14),transparent 37%),linear-gradient(180deg,#1a1b20 0,#111217 54%,#0b0c10 100%);animation:bcBackPrintV18 14s linear infinite}
+.bc-back-art:after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:linear-gradient(90deg,var(--gold) 0 72%,var(--pink) 72% 100%)}
+.bc-back-top,.bc-back-center,.bc-back-bottom{position:relative;z-index:2}
+.bc-back-center{padding:18px 16px 12px}
+.bc-back-message{padding:0;font-size:31px;max-width:86%}
+.bc-back-sub{margin-top:8px;color:#aeb1ba;font-size:7px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+.bc-back-bottom{bottom:15px}
+.bc-back-printline{position:absolute;z-index:5;top:0;bottom:0;width:2px;left:0;opacity:0;background:linear-gradient(180deg,rgba(96,110,255,.9),rgba(246,171,29,.85));box-shadow:0 0 9px rgba(82,102,255,.35);animation:bcBackScanV18 14s ease-in-out infinite}
+.bc-back-art:before{content:"";position:absolute;inset:-12% -30%;pointer-events:none;opacity:0;mix-blend-mode:screen;background:linear-gradient(114deg,transparent 30%,rgba(255,255,255,.06) 37%,rgba(255,255,255,.42) 42%,rgba(255,255,255,.06) 48%,transparent 55%);transform:translateX(-125%);animation:bcBackGlossV18 14s ease-in-out infinite}
+@keyframes bcCarriage{
+  0%,7%{left:12%}
+  29%{left:69%}
+  37%,49%{left:12%}
+  55%{left:12%}
+  76%{left:69%}
+  84%,100%{left:12%}
+}
+@keyframes bcStock{0%,11%{opacity:1}35%,100%{opacity:0}}
+@keyframes bcScan{0%,12%{left:0;opacity:0}17%{opacity:.82}32%{left:100%;opacity:.82}36%,100%{left:100%;opacity:0}}
+@keyframes bcPrintCardV18{0%,11%{opacity:0;clip-path:inset(0 100% 0 0)}17%{opacity:1;clip-path:inset(0 88% 0 0)}34%,91%{opacity:1;clip-path:inset(0 0 0 0)}97%,100%{opacity:0;clip-path:inset(0)}}
+@keyframes bcCardFlipV18{0%,43%{transform:rotateY(0deg)}50%,84%{transform:rotateY(180deg)}92%,100%{transform:rotateY(360deg)}}
+@keyframes bcFrontGlossV18{0%,31%{opacity:0;transform:translateX(-120%)}35%{opacity:1}42%{opacity:1;transform:translateX(120%)}46%,100%{opacity:0;transform:translateX(120%)}}
+@keyframes bcBackPrintV18{0%,52%{opacity:0;clip-path:inset(0 100% 0 0)}57%{opacity:1;clip-path:inset(0 90% 0 0)}77%,100%{opacity:1;clip-path:inset(0 0 0 0)}}
+@keyframes bcBackScanV18{0%,53%{left:0;opacity:0}58%{opacity:.85}77%{left:100%;opacity:.85}81%,100%{left:100%;opacity:0}}
+@keyframes bcBackGlossV18{0%,77%{opacity:0;transform:translateX(-125%)}80%{opacity:1}87%{opacity:1;transform:translateX(125%)}91%,100%{opacity:0;transform:translateX(125%)}}
+@media(max-width:580px){.bc-back-center{padding:13px 11px 8px}.bc-back-message{font-size:19px;max-width:90%}.bc-back-sub{font-size:4.8px;margin-top:5px}.bc-back-bottom{bottom:10px}}
+@media(prefers-reduced-motion:reduce){.bc-back-art{opacity:1!important;clip-path:none!important;animation:none!important}.bc-back-printline{display:none}.bc-back-art:before{opacity:.25;transform:none;animation:none!important}}
