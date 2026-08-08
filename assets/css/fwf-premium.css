@@ -430,3 +430,12 @@ html{scrollbar-color:var(--gold) #111;scrollbar-width:thin}
 .home-work.is-filtering .work-rail{opacity:.55}
 .home-work .work-rail{transition:opacity .16s ease}
 .home-work.is-business-cards .work-tile:not([hidden]){flex-basis:calc((100% - 28px)/3)!important}
+
+
+/* Review loading and interaction polish */
+.google-rating-line [data-google-rating]{font-variant-numeric:tabular-nums}
+.google-stars[aria-hidden="true"]{opacity:.35}
+.google-review-card{content-visibility:auto;contain-intrinsic-size:285px}
+.work-rail{scroll-padding-inline:1px}
+.work-tile{touch-action:pan-x pan-y}
+@media(prefers-reduced-motion:reduce){.home-work.is-filtering .work-rail{opacity:1!important;transform:none!important}}
