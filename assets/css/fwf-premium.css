@@ -439,3 +439,34 @@ html{scrollbar-color:var(--gold) #111;scrollbar-width:thin}
 .work-rail{scroll-padding-inline:1px}
 .work-tile{touch-action:pan-x pan-y}
 @media(prefers-reduced-motion:reduce){.home-work.is-filtering .work-rail{opacity:1!important;transform:none!important}}
+
+
+/* Mobile-safe before/after comparison */
+.ba-wrap{
+  max-width:100%;
+  width:100%;
+  touch-action:pan-y;
+  overscroll-behavior-inline:contain;
+  -webkit-user-select:none;
+  user-select:none;
+}
+.ba-img{
+  width:100%;
+  height:auto;
+  min-height:0;
+  object-fit:contain;
+}
+.ba-after-wrap img{
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+}
+.ba-wrap [data-ba-range]{
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  pointer-events:none;
+  -webkit-appearance:none;
+  appearance:none;
+  background:transparent;
+}
