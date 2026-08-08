@@ -43,14 +43,13 @@
 
 @media(max-width:1100px){
   .work-tile{flex-basis:calc((100% - 28px)/3)!important}
-  .business-card-feature-grid,.google-reviews-grid{grid-template-columns:1fr 1fr;gap:36px}
+  .business-card-feature-grid{grid-template-columns:1fr 1fr;gap:36px}
 }
 @media(max-width:820px){
   .work-tile{flex-basis:calc((100% - 14px)/2)!important}
   .business-card-feature,.business-card-hub-feature{padding:62px 0}
-  .business-card-feature-grid,.google-reviews-grid{grid-template-columns:1fr;gap:28px}
+  .business-card-feature-grid{grid-template-columns:1fr;gap:28px}
   .business-card-feature-image{aspect-ratio:16/10}
-  .google-reviews-map,.google-reviews-map iframe{min-height:330px}
 }
 @media(max-width:560px){
   .work-tile{flex-basis:86%!important}
@@ -60,7 +59,6 @@
   .business-card-finishes{grid-template-columns:1fr}
   .business-card-finishes li:nth-child(n){padding:11px 0;border-left:0}
   .business-card-feature-image{aspect-ratio:4/3}
-  .google-reviews-map,.google-reviews-map iframe{min-height:290px}
 }
 
 
@@ -70,14 +68,13 @@
 }
 @media(max-width:820px){
   .work-rail,.design-proof .work-rail{grid-auto-columns:calc((100% - 14px)/2)!important}
-  .business-card-feature-grid,.google-reviews-grid{grid-template-columns:1fr!important}
+  .business-card-feature-grid{grid-template-columns:1fr!important}
   .business-card-project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:560px){
   .work-rail,.design-proof .work-rail{grid-auto-columns:84%!important;gap:12px!important}
   .business-card-project-grid,.business-card-project-grid-page{grid-template-columns:1fr}
   .business-card-project{aspect-ratio:16/10}
-  .google-reviews-map iframe{min-height:300px}
 }
 
 @media (max-width:1100px){
@@ -104,3 +101,6 @@
   .card-tertiary{width:46%;left:1%;bottom:2%}
   .card-accent{width:44%;right:5%;bottom:4%}
 }
+
+@media(max-width:900px){.work-category-filter{margin-right:21px;padding-top:10px}.home-work.is-business-cards .work-tile:not([hidden]){flex-basis:calc((100% - 14px)/2)!important}}
+@media(max-width:620px){.work-category-nav{margin-bottom:18px}.work-category-filter{font-size:.72rem;margin-right:18px;padding-bottom:9px}.home-work.is-business-cards .work-tile:not([hidden]){flex-basis:84%!important}}

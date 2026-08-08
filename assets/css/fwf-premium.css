@@ -189,36 +189,6 @@
 .business-card-feature .text-link:hover{color:var(--gold)}
 
 
-.google-reviews-section{background:#fff}
-.google-reviews-grid{display:grid;grid-template-columns:minmax(0,.72fr) minmax(500px,1.28fr);gap:56px;align-items:stretch}
-.google-reviews-copy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
-.google-reviews-copy h2{font:900 clamp(2.8rem,5vw,5rem)/.9 var(--ff);text-transform:uppercase;margin:10px 0 18px}
-.google-reviews-copy p{max-width:600px;color:#5e5e5e;line-height:1.7;margin:0 0 24px}
-.google-reviews-map{min-height:390px;border:1px solid var(--line);background:#f3f0ea;overflow:hidden}
-.google-reviews-map iframe{display:block;width:100%;height:100%;min-height:390px;border:0}
-
-
-.split.single-column{grid-template-columns:minmax(0,920px)!important}
-
-
-.portfolio-filter{border-radius:0!important}
-
-
-.work-rail-shell{position:relative;overflow:hidden}
-.work-rail{display:grid!important;grid-auto-flow:column!important;grid-auto-columns:calc((100% - 42px)/4)!important;gap:14px!important;overflow-x:auto!important;overflow-y:hidden!important;scroll-snap-type:x mandatory!important;scroll-behavior:smooth!important;scrollbar-width:none!important;-ms-overflow-style:none!important;padding:0!important}
-.work-rail::-webkit-scrollbar{display:none!important}
-.work-tile{scroll-snap-align:start!important;aspect-ratio:4/3!important;border:0!important;padding:0!important;background:#111!important;overflow:hidden!important;cursor:zoom-in!important}
-.work-tile:after{display:none!important}
-.work-tile img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important}
-.business-card-project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.business-card-project{display:block;position:relative;width:100%;aspect-ratio:16/10;border:1px solid rgba(255,255,255,.16);padding:0;background:#111;overflow:hidden;cursor:zoom-in}
-.business-card-hub-feature .business-card-project{border-color:#d7d1c7;background:#eee}
-.business-card-project img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .28s ease}
-.business-card-project:hover img{transform:scale(1.018)}
-.business-card-project-grid-page{grid-template-columns:repeat(4,minmax(0,1fr))}
-.business-card-project-grid-page .business-card-project{border-color:#d7d1c7;background:#eee}
-.google-reviews-map{background:transparent!important;min-height:0!important}
-.google-reviews-map iframe{display:block;width:100%;min-height:360px;border:0;background:#fff}
 html{scrollbar-color:var(--gold) #111;scrollbar-width:thin}
 ::-webkit-scrollbar{width:12px;height:12px}
 ::-webkit-scrollbar-track{background:#111}
@@ -404,3 +374,59 @@ html{scrollbar-color:var(--gold) #111;scrollbar-width:thin}
   .bc-carriage,.bc-stock,.bc-scan,.bc-card,.bc-front,.bc-back,.bc-front .bc-art,.bc-back-art,.bc-back-printline,.bc-back-art:before,.bc-front:after{animation:none!important}
   .bc-front{opacity:1}.bc-back{opacity:0}.bc-front .bc-art{opacity:1;clip-path:none}.bc-stock{opacity:0}
 }
+
+
+/* Google reviews */
+.google-reviews-section{background:#f5f2ec;color:#111;border-top:1px solid #ddd7cd;border-bottom:1px solid #ddd7cd}
+.google-reviews-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.42fr);gap:56px;align-items:end;margin-bottom:34px}
+.google-reviews-title h2{font:900 clamp(2.9rem,5.2vw,5.6rem)/.89 var(--ff);text-transform:uppercase;letter-spacing:-.035em;margin:10px 0 16px}
+.google-reviews-title p{margin:0;max-width:650px;color:#5d5f64;line-height:1.7;font-size:1rem}
+.google-rating-panel{justify-self:end;width:min(100%,330px);border-top:3px solid var(--gold);padding:18px 0 0}
+.google-maps-attribution,.google-maps-text{font-family:Roboto,Arial,sans-serif;font-style:normal;font-weight:400;letter-spacing:normal;color:#5e5e5e;white-space:nowrap}
+.google-maps-attribution{font-size:14px;margin-bottom:7px}
+.google-maps-text{font-size:inherit}
+.google-rating-line{display:flex;align-items:center;gap:14px}
+.google-rating-line strong{font:900 2.55rem/1 var(--ff);letter-spacing:-.02em}
+.google-stars{color:var(--gold);font-size:1.02rem;letter-spacing:.08em}
+.google-review-count{margin-top:5px;color:#666;font-size:.9rem}
+.google-rating-panel a{display:inline-block;margin-top:12px;font-weight:800;font-size:.82rem;color:#111;text-decoration:none;border-bottom:1px solid #111;padding-bottom:2px}
+.google-rating-panel a:hover{color:var(--pink);border-color:var(--pink)}
+.google-review-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1px;background:#d8d3ca;border:1px solid #d8d3ca}
+.google-review-card{grid-column:span 2;background:#fff;padding:24px;min-width:0;display:flex;flex-direction:column;min-height:285px}
+.google-review-card:nth-child(n+4){grid-column:span 3}
+.google-review-author{display:flex;align-items:center;gap:11px;margin-bottom:15px}
+.google-review-avatar{width:42px;height:42px;border-radius:50%;object-fit:cover;flex:0 0 auto;background:#eee;border:1px solid #ddd}
+.google-review-author-copy{min-width:0}
+.google-review-author-copy a,.google-review-author-copy strong{display:block;color:#121212;font-size:.9rem;font-weight:850;text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.google-review-author-copy a:hover{text-decoration:underline}
+.google-review-time{display:block;margin-top:3px;color:#818181;font-size:.74rem}
+.google-review-stars{color:var(--gold);font-size:.88rem;letter-spacing:.06em;margin-bottom:12px}
+.google-review-text{margin:0;color:#505258;line-height:1.62;font-size:.9rem;flex:1}
+.google-review-source{display:inline-block;margin-top:17px;color:#111;font-size:.76rem;font-weight:800;text-decoration:none;border-bottom:1px solid #bbb;padding-bottom:2px;width:max-content;max-width:100%}
+.google-review-source:hover{border-color:var(--gold);color:#8a5a00}
+.google-review-skeleton{grid-column:span 2;min-height:250px;background:linear-gradient(90deg,#fff 0,#f0ede7 48%,#fff 100%);background-size:220% 100%;animation:googleReviewShimmer 1.25s ease-in-out infinite}
+.google-reviews-footer{display:flex;align-items:flex-start;justify-content:space-between;gap:30px;padding-top:18px;color:#747474;font-size:.75rem;line-height:1.5}
+.google-reviews-footer p{margin:0;max-width:620px}
+.google-review-actions{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}
+.google-review-actions a{color:#111;font-weight:800;text-decoration:none;white-space:nowrap}
+.google-review-actions a:hover{color:var(--pink)}
+.google-reviews-error{grid-column:1/-1;background:#fff;padding:30px;border:1px solid #e2ddd5;text-align:center}
+.google-reviews-error p{margin:0 0 12px;color:#555}
+.google-reviews-error a{font-weight:800;color:#111}
+@keyframes googleReviewShimmer{0%{background-position:100% 0}100%{background-position:-100% 0}}
+@media(max-width:960px){.google-reviews-head{grid-template-columns:1fr;gap:22px;align-items:start}.google-rating-panel{justify-self:start}.google-review-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.google-review-card,.google-review-card:nth-child(n+4),.google-review-skeleton{grid-column:auto}.google-review-card:last-child:nth-child(odd){grid-column:1/-1}.google-reviews-footer{flex-direction:column}.google-review-actions{justify-content:flex-start}}
+@media(max-width:620px){.google-reviews-title h2{font-size:clamp(2.65rem,14vw,4.25rem)}.google-review-grid{grid-template-columns:1fr}.google-review-card,.google-review-card:nth-child(n+4),.google-review-card:last-child:nth-child(odd),.google-review-skeleton{grid-column:auto;min-height:0}.google-review-actions{display:grid;gap:10px}.google-review-card{padding:20px}}
+@media(prefers-reduced-motion:reduce){.google-review-skeleton{animation:none;background:#f4f1eb}}
+
+
+/* Homepage project category switcher */
+.work-category-nav{display:flex;align-items:flex-end;gap:0;margin:-2px 0 22px;border-bottom:1px solid rgba(0,0,0,.16);overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.work-category-nav::-webkit-scrollbar{display:none}
+.work-category-filter{appearance:none;flex:0 0 auto;background:transparent;border:0;border-bottom:3px solid transparent;border-radius:0;padding:11px 0 10px;margin:0 25px -1px 0;color:#565656;font:800 .78rem/1 var(--ff);letter-spacing:.07em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:color .18s ease,border-color .18s ease}
+.work-category-filter:hover,.work-category-filter:focus-visible{color:#111}
+.work-category-filter.is-active{color:#111;border-bottom-color:var(--gold)}
+.work-category-filter:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.work-tile[hidden]{display:none!important}
+.home-work.is-filtering .work-rail{opacity:.55}
+.home-work .work-rail{transition:opacity .16s ease}
+.home-work.is-business-cards .work-tile:not([hidden]){flex-basis:calc((100% - 28px)/3)!important}
