@@ -608,3 +608,28 @@ html{scroll-padding-top:126px}
 .seo-guidance-links{display:grid;margin:8px 0 14px;border-top:1px solid rgba(255,255,255,.14)}
 .seo-guidance-links a{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.11);color:#e4e4e4;font-size:.92rem}
 .seo-guidance-links a:hover{color:var(--gold)}
+
+/* v30 final navigation depth, readability and review separators */
+.category-nav{max-width:1720px;height:52px;padding-left:16px;padding-right:16px}
+.category-top-link,.category-direct{font-size:.84rem;font-weight:760;padding-left:.61rem;padding-right:.61rem;letter-spacing:.003em}
+.category-top-link:after,.category-direct:after{left:.61rem;right:.61rem}
+.category-all-item>.category-top-link{font-weight:850;color:#991414}
+.category-mega-all-grid{max-width:1660px;grid-template-columns:minmax(210px,.78fr) repeat(5,minmax(0,1fr));gap:24px;padding:32px 30px 36px}
+.category-mega-business-grid{max-width:1580px;grid-template-columns:minmax(225px,.82fr) repeat(4,minmax(0,1fr));gap:27px}
+.category-mega-all-grid .category-mega-col a,.category-mega-business-grid .category-mega-col a{font-size:.87rem;padding:7.5px 0}
+.category-mega-all-grid .category-mega-col h3,.category-mega-business-grid .category-mega-col h3{font-size:.73rem}
+.all-services-mobile>summary{color:var(--gold)!important}
+.option-group[id],.option-list li[id]{scroll-margin-top:150px}
+
+/* Every Google review gets a visible, consistent divider on all rows. */
+.google-review-grid{gap:0;background:transparent;border:0;border-top:1px solid #d8d3ca;border-left:1px solid #d8d3ca}
+.google-review-card,.google-review-skeleton{border-right:1px solid #d8d3ca;border-bottom:1px solid #d8d3ca}
+.google-review-card{box-shadow:none}
+
+@media(max-width:1480px) and (min-width:1281px){
+  .category-top-link,.category-direct{font-size:.80rem;padding-left:.48rem;padding-right:.48rem}
+  .category-top-link:after,.category-direct:after{left:.48rem;right:.48rem}
+  .category-mega-all-grid{grid-template-columns:minmax(195px,.72fr) repeat(5,minmax(0,1fr));gap:18px;padding-left:22px;padding-right:22px}
+  .category-mega-business-grid{grid-template-columns:minmax(210px,.78fr) repeat(4,minmax(0,1fr));gap:20px;padding-left:24px;padding-right:24px}
+  .category-mega-all-grid .category-mega-col a,.category-mega-business-grid .category-mega-col a{font-size:.83rem}
+}
