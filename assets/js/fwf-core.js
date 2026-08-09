@@ -1,6 +1,8 @@
 (()=>{
   const q=(s,r=document)=>r.querySelector(s),qa=(s,r=document)=>[...r.querySelectorAll(s)];
   const body=document.body,header=q('[data-header]'),toggle=q('.menu-toggle'),mobile=q('.mobile-nav');
+  // Keep the mobile drawer at the document root so iOS Safari cannot trap fixed positioning inside the sticky/backdrop-filter header.
+  if(mobile&&mobile.parentElement!==body)body.appendChild(mobile);
   function closeMenu(){
     if(!mobile||!toggle)return;
     mobile.classList.remove('open');
@@ -16,7 +18,7 @@
       body.classList.toggle('menu-open',open);
     });
     qa('.mobile-nav a').forEach(a=>a.addEventListener('click',closeMenu));
-    document.addEventListener('click',e=>{if(mobile.classList.contains('open')&&header&&!header.contains(e.target))closeMenu()});
+    document.addEventListener('click',e=>{if(mobile.classList.contains('open')&&header&&!header.contains(e.target)&&!mobile.contains(e.target))closeMenu()});
     const mq=matchMedia('(min-width:1281px)');
     const sync=e=>{if(e.matches)closeMenu()};
     mq.addEventListener?.('change',sync);
