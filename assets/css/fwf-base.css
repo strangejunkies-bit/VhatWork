@@ -30,7 +30,7 @@ html{scrollbar-color:var(--gold) #101010;scrollbar-width:thin}
 /* Production accessibility and device hardening */
 html{overflow-x:clip;scroll-padding-top:88px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{min-width:320px;max-width:100%;overflow-x:clip}
-body.menu-open{overflow:hidden}
+body.menu-open{overscroll-behavior:none}
 :target{scroll-margin-top:88px}
 :where(h1,h2,h3){text-wrap:balance}
 :where(p,li){text-wrap:pretty}
