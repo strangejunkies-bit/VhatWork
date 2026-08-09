@@ -135,7 +135,7 @@
       <image:loc>https://freshworkfactory.com/assets/images/portfolio/fresh-work-factory-website-showcase.webp</image:loc>
       <image:title>Fresh Work Factory responsive web design portfolio</image:title>
     </image:image>
-  </url>
+  <image:image><image:loc>https://freshworkfactory.com/assets/images/seo-proof/olive-branch-homepage-real.webp</image:loc><image:title>Olive Branch Ypsi website designed by Fresh Work Factory</image:title></image:image></url>
   <url>
     <loc>https://freshworkfactory.com/portfolio/</loc>
     <image:image>
@@ -522,4 +522,4 @@
       <image:title>FormFactory responsive web application design</image:title>
     </image:image>
   </url>
-</urlset>
+<url><loc>https://freshworkfactory.com/digital-marketing/</loc><image:image><image:loc>https://freshworkfactory.com/assets/images/seo-proof/ga4-overview.webp</image:loc><image:title>Fresh Work Factory Google Analytics setup</image:title></image:image><image:image><image:loc>https://freshworkfactory.com/assets/images/seo-proof/ga4-realtime.webp</image:loc><image:title>Fresh Work Factory realtime analytics and event tracking</image:title></image:image><image:image><image:loc>https://freshworkfactory.com/assets/images/seo-proof/search-console-overview.webp</image:loc><image:title>Fresh Work Factory Google Search Console indexing overview</image:title></image:image></url><url><loc>https://freshworkfactory.com/services/web/seo-services/</loc><image:image><image:loc>https://freshworkfactory.com/assets/images/seo-proof/search-console-overview.webp</image:loc><image:title>Google Search Console used for Fresh Work Factory SEO monitoring</image:title></image:image><image:image><image:loc>https://freshworkfactory.com/assets/images/seo-proof/ga4-overview.webp</image:loc><image:title>Google Analytics used for Fresh Work Factory traffic measurement</image:title></image:image></url></urlset>
