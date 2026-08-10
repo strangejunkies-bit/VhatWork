@@ -51,6 +51,7 @@
   const filters=[...document.querySelectorAll('.portfolio-filter[data-filter]')];
   const webCards=[...document.querySelectorAll('.gallery-card[data-gallery-category~="web-design"]')];
   if(!filters.length||!webCards.length)return;
+  webCards.forEach((card,i)=>card.dataset.webOrder=String(i+1));
   const sync=value=>{
     const webOnly=value==='web-design';
     document.documentElement.classList.toggle('portfolio-web-filter-active',webOnly);
