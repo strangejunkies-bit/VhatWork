@@ -1,0 +1,91 @@
+/* Fresh Work Factory v57 — production-only portal/web-project/review fixes. */
+
+/* Web project presentation: real screenshots only, consistent across all five projects. */
+.web-showcase-grid{
+  display:grid!important;
+  grid-template-columns:repeat(6,minmax(0,1fr))!important;
+  gap:18px!important;
+  align-items:stretch!important;
+}
+.web-showcase-card{
+  grid-column:span 2!important;
+  margin:0!important;
+  min-width:0!important;
+  aspect-ratio:auto!important;
+  overflow:hidden!important;
+  background:#111!important;
+  border:1px solid rgba(255,255,255,.13)!important;
+  box-shadow:0 18px 50px rgba(0,0,0,.24)!important;
+  cursor:zoom-in!important;
+}
+.web-showcase-card:nth-child(n+4){grid-column:span 3!important}
+.web-showcase-card img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:1200/680!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  background:#0c0c0c!important;
+}
+.web-showcase-card figcaption{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:18px;
+  padding:16px 17px 17px;
+  border-top:1px solid rgba(255,255,255,.11);
+  background:#111;
+}
+.web-showcase-card figcaption strong{
+  color:#fff;
+  font:900 1.02rem/1 var(--ff);
+  text-transform:uppercase;
+  letter-spacing:.01em;
+}
+.web-showcase-card figcaption span{
+  color:#aaa;
+  font:700 .72rem/1.2 var(--fb);
+  text-align:right;
+}
+
+/* Five-item web strip is balanced on wide screens and responsive below. */
+.web-project-strip-grid.web-project-strip-grid-landscape{
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  gap:12px!important;
+}
+.web-project-strip-grid.web-project-strip-grid-landscape a{
+  aspect-ratio:1200/680!important;
+  background:#111!important;
+}
+.web-project-strip-grid.web-project-strip-grid-landscape img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+
+/* Portfolio website work should show the entire unified project display without a 4:3 crop. */
+.gallery-card[data-gallery-category~="web-design"]{aspect-ratio:1200/680!important;background:#111!important}
+.gallery-card[data-gallery-category~="web-design"] img{object-fit:cover!important;object-position:center!important;background:#111!important}
+
+/* Homepage rail keeps the standard card geometry but does not crop the web-project display. */
+.work-tile[data-work-category~="web-design"]{background:#111!important}
+.work-tile[data-work-category~="web-design"] img{object-fit:contain!important;object-position:center!important;background:#111!important}
+
+@media(max-width:1100px){
+  .web-showcase-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}
+  .web-showcase-card,.web-showcase-card:nth-child(n+4){grid-column:auto!important}
+  .web-showcase-card:last-child:nth-child(odd){grid-column:1/-1!important;max-width:calc(50% - 7px);width:100%;justify-self:center}
+  .web-project-strip-grid.web-project-strip-grid-landscape{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+@media(max-width:720px){
+  .web-showcase-grid{grid-template-columns:1fr!important;gap:12px!important}
+  .web-showcase-card,.web-showcase-card:nth-child(n+4),.web-showcase-card:last-child:nth-child(odd){grid-column:auto!important;max-width:none!important;width:auto!important}
+  .web-showcase-card figcaption{padding:14px;display:block}
+  .web-showcase-card figcaption span{display:block;margin-top:6px;text-align:left}
+  .web-project-strip-grid.web-project-strip-grid-landscape{grid-template-columns:1fr 1fr!important;gap:8px!important}
+}
+@media(max-width:460px){
+  .web-project-strip-grid.web-project-strip-grid-landscape{grid-template-columns:1fr!important}
+}
