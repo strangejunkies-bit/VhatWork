@@ -1,0 +1,356 @@
+/* Fresh Work Factory v72 — final web-project presentation.
+   The five approved project images are native 3:4 device compositions using real project pixels.
+   Approved 3:4 studio device showcases. Preserve full image pixels with no crop, no letterboxing and no forced landscape containers. */
+
+/* --- Web Design: approved 3:4 showcase images, 3 across / final 2 centered --- */
+.web-showcase-grid{
+  display:grid!important;
+  grid-template-columns:repeat(6,minmax(0,1fr))!important;
+  gap:34px 24px!important;
+  align-items:start!important;
+  overflow:visible!important;
+}
+.web-showcase-card{
+  grid-column:span 2!important;
+  margin:0!important;
+  min-width:0!important;
+  overflow:visible!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  cursor:zoom-in!important;
+  aspect-ratio:auto!important;
+}
+.web-showcase-card:nth-child(4){grid-column:2/span 2!important}
+.web-showcase-card:nth-child(5){grid-column:4/span 2!important}
+.web-showcase-card img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:auto!important;
+  object-fit:initial!important;
+  object-position:initial!important;
+  background:#111!important;
+  border:0!important;
+  box-shadow:0 18px 46px rgba(0,0,0,.28)!important;
+  transition:transform .2s ease,filter .2s ease!important;
+}
+.web-showcase-card:hover img{transform:translateY(-2px)!important;filter:brightness(1.02)!important}
+.web-showcase-card figcaption{
+  display:flex!important;
+  align-items:flex-start!important;
+  justify-content:space-between!important;
+  gap:18px!important;
+  padding:14px 1px 0!important;
+  border:0!important;
+  background:transparent!important;
+}
+.web-showcase-card figcaption strong{
+  color:#fff!important;
+  font:900 1rem/1.05 var(--ff)!important;
+  text-transform:uppercase!important;
+  letter-spacing:.01em!important;
+}
+.web-showcase-card figcaption span{
+  color:#9f9f9f!important;
+  font:700 .7rem/1.25 var(--fb)!important;
+  text-align:right!important;
+  white-space:nowrap!important;
+}
+
+/* --- Graphic Design web-project section: same full approved images --- */
+.web-project-strip-grid.web-project-strip-grid-landscape{
+  display:grid!important;
+  grid-template-columns:repeat(6,minmax(0,1fr))!important;
+  gap:26px 20px!important;
+  align-items:start!important;
+  overflow:visible!important;
+}
+.web-project-strip-grid.web-project-strip-grid-landscape a{
+  grid-column:span 2!important;
+  display:block!important;
+  min-width:0!important;
+  aspect-ratio:auto!important;
+  overflow:hidden!important;
+  background:#111!important;
+  border:0!important;
+  box-shadow:0 15px 36px rgba(24,20,14,.12)!important;
+}
+.web-project-strip-grid.web-project-strip-grid-landscape a:nth-child(4){grid-column:2/span 2!important}
+.web-project-strip-grid.web-project-strip-grid-landscape a:nth-child(5){grid-column:4/span 2!important}
+.web-project-strip-grid.web-project-strip-grid-landscape img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:auto!important;
+  object-fit:initial!important;
+  object-position:initial!important;
+  background:#111!important;
+  transition:transform .2s ease,filter .2s ease!important;
+}
+.web-project-strip-grid.web-project-strip-grid-landscape a:hover img{transform:scale(1.006)!important;filter:contrast(1.01)!important}
+
+/* --- Homepage work rail: use full 3:4 showcase without crop --- */
+.work-tile[data-work-category~="web-design"]{
+  aspect-ratio:3/4!important;
+  background:#111!important;
+}
+.work-tile[data-work-category~="web-design"] img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:#111!important;
+}
+
+/* Homepage / category card can crop slightly by design, but never distort. */
+.category-card img[src*="web-projects-v72/"]{
+  object-fit:cover!important;
+  object-position:center 42%!important;
+  background:#111!important;
+}
+
+/* --- Portfolio: Web Design filter uses the same full five-project system --- */
+.gallery-card[data-gallery-category~="web-design"]{
+  aspect-ratio:3/4!important;
+  background:#111!important;
+}
+.gallery-card[data-gallery-category~="web-design"] img{
+  width:100%!important;
+  height:100%!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:#111!important;
+}
+.portfolio-web-filter-active .portfolio-grid{
+  display:grid!important;
+  grid-template-columns:repeat(6,minmax(0,1fr))!important;
+  gap:30px 22px!important;
+  overflow:visible!important;
+}
+.portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"]{
+  grid-column:span 2!important;
+  aspect-ratio:auto!important;
+  min-width:0!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  overflow:visible!important;
+}
+.portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"]:nth-of-type(4){grid-column:2/span 2!important}
+.portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"]:nth-of-type(5){grid-column:4/span 2!important}
+.portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"] img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:auto!important;
+  object-fit:initial!important;
+  object-position:initial!important;
+  background:#111!important;
+  box-shadow:0 16px 42px rgba(0,0,0,.13)!important;
+  transform:none!important;
+  filter:none!important;
+}
+.portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"] figcaption{
+  position:static!important;
+  display:flex!important;
+  align-items:flex-start!important;
+  justify-content:space-between!important;
+  gap:16px!important;
+  opacity:1!important;
+  transform:none!important;
+  padding:13px 1px 0!important;
+  background:transparent!important;
+  color:#111!important;
+}
+.portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"] figcaption small{
+  color:#6d665e!important;
+  font:700 .7rem/1.2 var(--fb)!important;
+  order:2!important;
+  text-align:right!important;
+}
+.portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"] figcaption strong{
+  color:#111!important;
+  font:900 .98rem/1.05 var(--ff)!important;
+  text-transform:uppercase!important;
+  order:1!important;
+}
+
+/* --- Lightbox: show every approved pixel; never crop the showcase --- */
+.lightbox .lightbox-stage>img[src*="web-projects-v72/"]{
+  display:block!important;
+  width:auto!important;
+  height:auto!important;
+  max-width:min(92vw,1086px)!important;
+  max-height:calc(100dvh - 110px)!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:#111!important;
+  box-shadow:0 26px 90px rgba(0,0,0,.54)!important;
+}
+
+@media(max-width:1080px){
+  .web-showcase-grid,
+  .web-project-strip-grid.web-project-strip-grid-landscape,
+  .portfolio-web-filter-active .portfolio-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:24px 18px!important;
+  }
+  .web-showcase-card,
+  .web-project-strip-grid.web-project-strip-grid-landscape a,
+  .portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"]{grid-column:auto!important}
+  .web-showcase-card:nth-child(4),.web-showcase-card:nth-child(5),
+  .web-project-strip-grid.web-project-strip-grid-landscape a:nth-child(4),
+  .web-project-strip-grid.web-project-strip-grid-landscape a:nth-child(5),
+  .portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"]:nth-of-type(4),
+  .portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"]:nth-of-type(5){grid-column:auto!important}
+  .web-showcase-card:last-child:nth-child(odd),
+  .web-project-strip-grid.web-project-strip-grid-landscape a:last-child:nth-child(odd),
+  .portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"]:last-child:nth-child(odd){
+    grid-column:1/-1!important;
+    width:calc(50% - 9px)!important;
+    justify-self:center!important;
+  }
+}
+
+@media(max-width:680px){
+  .web-showcase-grid,
+  .web-project-strip-grid.web-project-strip-grid-landscape,
+  .portfolio-web-filter-active .portfolio-grid{
+    grid-template-columns:1fr!important;
+    gap:22px!important;
+  }
+  .web-showcase-card:last-child:nth-child(odd),
+  .web-project-strip-grid.web-project-strip-grid-landscape a:last-child:nth-child(odd),
+  .portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"]:last-child:nth-child(odd){
+    grid-column:auto!important;
+    width:auto!important;
+    justify-self:stretch!important;
+  }
+  .web-showcase-card figcaption,
+  .portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"] figcaption{display:block!important}
+  .web-showcase-card figcaption span,
+  .portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"] figcaption small{display:block!important;margin-top:6px!important;text-align:left!important;white-space:normal!important}
+  .work-tile[data-work-category~="web-design"]{aspect-ratio:3/4!important}
+  .lightbox .lightbox-stage>img[src*="web-projects-v72/"]{max-width:calc(100vw - 18px)!important;max-height:calc(100dvh - 128px)!important}
+}
+
+/* Reviews: preserve the deterministic divider system. */
+.google-review-grid{gap:0!important;background:#fff!important;border:0!important;border-top:1px solid #b9b1a6!important;border-left:1px solid #b9b1a6!important}
+.google-review-card,.google-review-skeleton,.google-reviews-error{border:0!important;box-shadow:inset -1px 0 0 #b9b1a6,inset 0 -1px 0 #b9b1a6!important}
+
+
+/* v72 catalog correction — restore the tighter homepage service directory.
+   Preserve each real project photo instead of zoom-cropping it inside an oversized card. */
+@media (min-width:1281px){
+  .category-card-grid-final{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:16px!important;margin-top:30px!important}
+}
+@media (min-width:901px) and (max-width:1280px){
+  .category-card-grid-final{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:16px!important;margin-top:30px!important}
+}
+.category-card-grid-final .category-card{min-width:0!important}
+.category-card-grid-final .category-card img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:#e9e4dc!important;
+}
+.category-card-grid-final .category-card>div{padding:16px 16px 18px!important;min-height:158px!important}
+.category-card-grid-final .category-card>div>span{font-size:.68rem!important;margin-bottom:8px!important}
+.category-card-grid-final .category-card h3{font-size:clamp(1.35rem,1.65vw,1.72rem)!important;line-height:1!important;margin-bottom:8px!important}
+.category-card-grid-final .category-card p{font-size:.86rem!important;line-height:1.46!important;margin-bottom:14px!important}
+.category-card-grid-final .category-card b{font-size:.75rem!important}
+@media(max-width:900px){
+  .category-card-grid-final{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px!important}
+  .category-card-grid-final .category-card{display:flex!important;flex-direction:column!important}
+  .category-card-grid-final .category-card img{height:auto!important;min-height:0!important;aspect-ratio:auto!important}
+  .category-card-grid-final .category-card>div{min-height:150px!important}
+}
+@media(max-width:560px){
+  .category-card-grid-final{grid-template-columns:1fr!important;gap:14px!important}
+  .category-card-grid-final .category-card>div{min-height:0!important;padding:15px 15px 17px!important}
+}
+
+/* v72 approved five-project layout — compact on desktop, consistent across surfaces. */
+@media(min-width:1280px){
+  .web-showcase-grid,
+  .web-project-strip-grid.web-project-strip-grid-landscape,
+  .portfolio-web-filter-active .portfolio-grid{
+    grid-template-columns:repeat(5,minmax(0,1fr))!important;
+    gap:20px 16px!important;
+  }
+  .web-showcase-card,
+  .web-showcase-card:nth-child(4),.web-showcase-card:nth-child(5),
+  .web-project-strip-grid.web-project-strip-grid-landscape a,
+  .web-project-strip-grid.web-project-strip-grid-landscape a:nth-child(4),
+  .web-project-strip-grid.web-project-strip-grid-landscape a:nth-child(5),
+  .portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"],
+  .portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"]:nth-of-type(4),
+  .portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"]:nth-of-type(5){
+    grid-column:auto!important;
+    width:auto!important;
+    justify-self:stretch!important;
+  }
+}
+@media(min-width:901px) and (max-width:1279px){
+  .web-showcase-grid,
+  .web-project-strip-grid.web-project-strip-grid-landscape,
+  .portfolio-web-filter-active .portfolio-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:22px 18px!important;
+  }
+  .web-showcase-card,
+  .web-showcase-card:nth-child(4),.web-showcase-card:nth-child(5),
+  .web-project-strip-grid.web-project-strip-grid-landscape a,
+  .web-project-strip-grid.web-project-strip-grid-landscape a:nth-child(4),
+  .web-project-strip-grid.web-project-strip-grid-landscape a:nth-child(5),
+  .portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"],
+  .portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"]:nth-of-type(4),
+  .portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"]:nth-of-type(5){grid-column:auto!important;width:auto!important;justify-self:stretch!important}
+}
+@media(min-width:561px) and (max-width:900px){
+  .web-showcase-grid,
+  .web-project-strip-grid.web-project-strip-grid-landscape,
+  .portfolio-web-filter-active .portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:20px 16px!important}
+  .web-showcase-card,
+  .web-showcase-card:nth-child(4),.web-showcase-card:nth-child(5),
+  .web-project-strip-grid.web-project-strip-grid-landscape a,
+  .web-project-strip-grid.web-project-strip-grid-landscape a:nth-child(4),
+  .web-project-strip-grid.web-project-strip-grid-landscape a:nth-child(5),
+  .portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"],
+  .portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"]:nth-of-type(4),
+  .portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"]:nth-of-type(5){grid-column:auto!important;width:auto!important;justify-self:stretch!important}
+}
+@media(max-width:560px){
+  .web-showcase-grid,
+  .web-project-strip-grid.web-project-strip-grid-landscape,
+  .portfolio-web-filter-active .portfolio-grid{grid-template-columns:1fr!important;gap:20px!important}
+}
+
+/* v72 final catalog sizing — keep this homepage block compact and prevent image zoom. */
+.category-explorer-final{
+  padding-top:64px!important;
+  padding-bottom:68px!important;
+}
+.category-explorer-final .category-explorer-head{margin-bottom:0!important}
+@media(max-width:760px){
+  .category-explorer-final{padding-top:52px!important;padding-bottom:56px!important}
+}
+
+/* v74 portfolio normalization — web project cards match every other portfolio tile.
+   Approved source images remain untouched; only mixed-gallery presentation changes. */
+.portfolio-grid .gallery-card[data-gallery-category~="web-design"],.portfolio-web-filter-active .portfolio-grid .gallery-card[data-gallery-category~="web-design"]{grid-column:auto!important;width:auto!important;justify-self:stretch!important;aspect-ratio:4/3!important;min-width:0!important;overflow:hidden!important;position:relative!important;background:#111!important;border:0!important;box-shadow:none!important}
+.portfolio-grid .gallery-card[data-gallery-category~="web-design"] img,.portfolio-web-filter-active .portfolio-grid .gallery-card[data-gallery-category~="web-design"] img{display:block!important;width:100%!important;height:100%!important;aspect-ratio:auto!important;object-fit:cover!important;object-position:center 43%!important;background:#111!important;box-shadow:none!important;transform:none!important;filter:none!important}
+.portfolio-grid .gallery-card[data-gallery-category~="web-design"]:hover img,.portfolio-web-filter-active .portfolio-grid .gallery-card[data-gallery-category~="web-design"]:hover img{transform:scale(1.025)!important;filter:brightness(.82)!important}
+.portfolio-web-filter-active .portfolio-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px!important;overflow:visible!important}
+.portfolio-grid .gallery-card[data-gallery-category~="web-design"] figcaption,.portfolio-web-filter-active .portfolio-grid .gallery-card[data-gallery-category~="web-design"] figcaption{position:absolute!important;left:0!important;right:0!important;bottom:0!important;display:block!important;padding:58px 16px 14px!important;background:linear-gradient(0deg,rgba(0,0,0,.84),transparent 64%)!important;color:#fff!important;opacity:1!important;transform:none!important;pointer-events:none!important}
+.portfolio-grid .gallery-card[data-gallery-category~="web-design"] figcaption small,.portfolio-web-filter-active .portfolio-grid .gallery-card[data-gallery-category~="web-design"] figcaption small{display:block!important;margin:0 0 5px!important;color:var(--gold)!important;font:800 .67rem/1 var(--ff)!important;text-align:left!important;text-transform:uppercase!important;letter-spacing:.12em!important;order:initial!important}
+.portfolio-grid .gallery-card[data-gallery-category~="web-design"] figcaption strong,.portfolio-web-filter-active .portfolio-grid .gallery-card[data-gallery-category~="web-design"] figcaption strong{display:block!important;color:#fff!important;font:800 .96rem/1.1 var(--ff)!important;text-transform:uppercase!important;order:initial!important}
+@media(max-width:1180px){.portfolio-web-filter-active .portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:620px){.portfolio-web-filter-active .portfolio-grid{grid-template-columns:1fr!important}}

@@ -1,0 +1,141 @@
+/* Fresh Work Factory v78 — full-width premium new-client ticker. */
+.home-client-offer{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  background:#0a0a0a;
+  color:#fff;
+  border-top:1px solid rgba(255,255,255,.07);
+  border-bottom:1px solid rgba(255,255,255,.09);
+}
+.home-client-offer:before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto;
+  height:2px;
+  background:linear-gradient(90deg,var(--gold),var(--pink));
+  opacity:.9;
+  pointer-events:none;
+}
+.home-client-offer-inner{
+  position:relative;
+  z-index:1;
+  width:100%;
+  height:52px;
+  margin:0;
+  padding:0 clamp(18px,2.4vw,46px);
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:clamp(20px,2.7vw,44px);
+}
+.home-client-offer-lead{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:max-content;
+  white-space:nowrap;
+  color:#fff;
+  font-family:var(--fb);
+}
+.home-client-offer-lead span{
+  color:#f2f2f2;
+  font:700 .7rem/1 var(--fb);
+  letter-spacing:.055em;
+  text-transform:uppercase;
+}
+.home-client-offer-lead strong{
+  color:var(--gold);
+  font:800 .96rem/1 var(--fb);
+  letter-spacing:-.01em;
+}
+.home-client-offer-marquee{
+  position:relative;
+  min-width:0;
+  height:100%;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  mask-image:linear-gradient(90deg,transparent,#000 32px,#000 calc(100% - 32px),transparent);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 32px,#000 calc(100% - 32px),transparent);
+}
+.home-client-offer-marquee-track{
+  width:max-content;
+  display:flex;
+  align-items:center;
+  gap:22px;
+  white-space:nowrap;
+  will-change:transform;
+  animation:fwfOfferTicker 29s linear infinite;
+  font-family:var(--fb);
+}
+.home-client-offer-marquee-track span{
+  color:#c9c9c9;
+  font:600 .76rem/1 var(--fb);
+  letter-spacing:.005em;
+}
+.home-client-offer-marquee-track strong{
+  color:#fff;
+  font:800 .76rem/1 var(--fb);
+  letter-spacing:.01em;
+}
+.home-client-offer-marquee-track i{
+  color:var(--pink);
+  font-style:normal;
+  font-size:.76rem;
+  opacity:.9;
+}
+.home-client-offer-cta{
+  min-height:38px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding-left:20px;
+  border-left:1px solid rgba(255,255,255,.14);
+  white-space:nowrap;
+  background:transparent;
+  color:var(--gold);
+  font:800 .76rem/1 var(--fb);
+  letter-spacing:.01em;
+  text-transform:none;
+  transition:color .16s ease,transform .16s ease;
+}
+.home-client-offer-cta span{font-size:1rem;line-height:1}
+.home-client-offer-cta:hover,.home-client-offer-cta:focus-visible{color:#fff;transform:translateX(2px)}
+@keyframes fwfOfferTicker{to{transform:translateX(-50%)}}
+@media(max-width:900px){
+  .home-client-offer-inner{height:50px;padding:0 18px;gap:16px}
+  .home-client-offer-lead span{display:none}
+  .home-client-offer-lead strong{font-size:.9rem}
+  .home-client-offer-cta{padding-left:15px;font-size:.72rem}
+}
+@media(max-width:560px){
+  .home-client-offer-inner{grid-template-columns:minmax(0,1fr) auto;height:48px;padding:0 14px;gap:10px}
+  .home-client-offer-lead{display:none}
+  .home-client-offer-marquee{mask-image:linear-gradient(90deg,#000,#000 calc(100% - 22px),transparent);-webkit-mask-image:linear-gradient(90deg,#000,#000 calc(100% - 22px),transparent)}
+  .home-client-offer-marquee-track{gap:17px;animation-duration:26s}
+  .home-client-offer-marquee-track span,.home-client-offer-marquee-track strong{font-size:.72rem}
+  .home-client-offer-cta{min-height:34px;padding-left:12px;font-size:.69rem}
+}
+@media(prefers-reduced-motion:reduce){.home-client-offer-marquee-track{animation:none;transform:none}}
+
+/* Client Portal landing offer stays restrained and integrated into the information card. */
+.account-welcome-offer{
+  margin:-3px 0 22px;
+  padding:14px 0 14px 16px;
+  border:0;
+  border-left:3px solid var(--gold);
+  border-bottom:1px solid #e2ddd5;
+  background:transparent;
+}
+.account-welcome-offer>span{display:block;color:var(--pink);font:700 .66rem/1 var(--fb);letter-spacing:.08em;text-transform:uppercase}
+.account-welcome-offer>strong{display:block;max-width:30ch;margin-top:7px;color:#111;font:800 1.06rem/1.22 var(--fb);letter-spacing:-.01em}
+.account-welcome-offer>div{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:10px}
+.account-welcome-offer b{font:800 .84rem/1 var(--fb);letter-spacing:.035em;color:#111}
+.account-welcome-offer small{max-width:230px;color:#777;text-align:right;font-size:.64rem;line-height:1.4}
+.account-entry-actions .account-secondary{border-color:rgba(255,255,255,.5)}
+.account-entry-card{box-shadow:0 30px 80px rgba(0,0,0,.25)}
+
+
+@media(max-width:620px){.account-welcome-offer>div{align-items:flex-start;flex-direction:column}.account-welcome-offer small{max-width:none;text-align:left}}
