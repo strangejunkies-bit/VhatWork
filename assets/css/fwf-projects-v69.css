@@ -1,0 +1,38 @@
+/* Fresh Work Factory v69 — final web-project presentation + review divider hardening. */
+.web-showcase-grid{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:18px!important;align-items:start!important;overflow:visible!important}
+.web-showcase-card{grid-column:span 2!important;margin:0!important;min-width:0!important;overflow:hidden!important;background:transparent!important;border:0!important;box-shadow:none!important;cursor:zoom-in!important}
+.web-showcase-card:nth-child(4){grid-column:2/span 2!important}.web-showcase-card:nth-child(5){grid-column:4/span 2!important}
+.web-showcase-card img{display:block!important;width:100%!important;height:auto!important;aspect-ratio:1200/680!important;object-fit:contain!important;object-position:center!important;background:#f4efe8!important;border:0!important}
+.web-showcase-card figcaption{display:flex!important;align-items:end!important;justify-content:space-between!important;gap:14px!important;padding:14px 2px 4px!important;border:0!important;background:transparent!important}
+.web-showcase-card figcaption strong{color:#fff;font:900 .96rem/1.05 var(--ff);text-transform:uppercase;letter-spacing:.01em}.web-showcase-card figcaption span{color:#aaa;font:700 .7rem/1.2 var(--fb);text-align:right}
+
+/* All web-project surfaces use the same 1200x680 neutral presentation with no crop or black side bars. */
+.web-project-strip-grid.web-project-strip-grid-landscape{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:12px!important;align-items:stretch!important}
+.web-project-strip-grid.web-project-strip-grid-landscape a{display:block!important;aspect-ratio:1200/680!important;min-width:0!important;overflow:hidden!important;background:transparent!important}
+.web-project-strip-grid.web-project-strip-grid-landscape img{display:block!important;width:100%!important;height:100%!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;background:transparent!important}
+.gallery-card[data-gallery-category~="web-design"],.work-tile[data-work-category~="web-design"]{background:transparent!important}
+.gallery-card[data-gallery-category~="web-design"] img,.work-tile[data-work-category~="web-design"] img{object-fit:contain!important;object-position:center!important;background:transparent!important}
+
+/* Portfolio Web Design filter: same full device presentations, no clipping. */
+.portfolio-web-filter-active .portfolio-grid{grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:18px!important;overflow:visible!important}
+.portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"]{grid-column:span 2!important;aspect-ratio:auto!important;min-width:0!important;background:transparent!important;border:0!important;box-shadow:none!important;overflow:hidden!important}
+.portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"] img{display:block!important;width:100%!important;height:auto!important;aspect-ratio:1200/680!important;object-fit:contain!important;object-position:center!important;background:#f4efe8!important}
+.portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"][data-web-order="4"]{grid-column:2/span 2!important}.portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"][data-web-order="5"]{grid-column:4/span 2!important}
+
+/* Reviews: one deterministic divider system. Inset lines avoid fractional-grid missing dividers. */
+.google-review-grid{gap:0!important;background:#fff!important;border:0!important;border-top:1px solid #b9b1a6!important;border-left:1px solid #b9b1a6!important}
+.google-review-card,.google-review-skeleton,.google-reviews-error{border:0!important;box-shadow:inset -1px 0 0 #b9b1a6,inset 0 -1px 0 #b9b1a6!important}
+
+@media(max-width:1180px){
+  .web-showcase-grid,.portfolio-web-filter-active .portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .web-showcase-card,.portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"]{grid-column:auto!important}
+  .web-showcase-card:nth-child(4),.web-showcase-card:nth-child(5),.portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"][data-web-order="4"],.portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"][data-web-order="5"]{grid-column:auto!important}
+  .web-showcase-card:last-child:nth-child(odd),.portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"]:last-child:nth-child(odd){grid-column:1/-1!important;width:calc(50% - 9px)!important;justify-self:center!important}
+  .web-project-strip-grid.web-project-strip-grid-landscape{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+@media(max-width:820px){
+  .web-showcase-grid,.portfolio-web-filter-active .portfolio-grid{grid-template-columns:1fr!important;gap:18px!important}
+  .web-showcase-card:last-child:nth-child(odd),.portfolio-web-filter-active .gallery-card[data-gallery-category~="web-design"]:last-child:nth-child(odd){grid-column:auto!important;width:auto!important;justify-self:stretch!important}
+  .web-project-strip-grid.web-project-strip-grid-landscape{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+}
+@media(max-width:520px){.web-showcase-card figcaption{display:block!important;padding:12px 0 2px!important}.web-showcase-card figcaption span{display:block!important;margin-top:6px!important;text-align:left!important}.web-project-strip-grid.web-project-strip-grid-landscape{grid-template-columns:1fr!important;gap:9px!important}}
