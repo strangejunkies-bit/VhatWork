@@ -38,7 +38,7 @@
     const status=q('[data-lightbox-status]',overlay),count=q('.lightbox-count',overlay),label=`${index+1} / ${items.length}`;
     if(status)status.textContent=`Project ${index+1} of ${items.length}: ${x.alt}`;if(count)count.textContent=label;
   }
-  function open(el){ensure();items=eligible();index=Math.max(0,items.indexOf(el));lastFocus=document.activeElement;render();overlay.classList.add('open');lockPage();q('.lightbox-close',overlay).focus({preventScroll:true})}
+  function open(el){ensure();items=eligible();index=Math.max(0,items.indexOf(el));lastFocus=document.activeElement;render();overlay.classList.add('open');lockPage();const closeBtn=q('.lightbox-close',overlay);if(!window.matchMedia('(pointer: coarse)').matches){closeBtn?.focus({preventScroll:true})}}
   function close(){if(!overlay?.classList.contains('open'))return;overlay.classList.remove('open');unlockPage();lastFocus?.focus?.({preventScroll:true})}
   function move(n){index+=n;render()}
   qa('[data-filter]').forEach(btn=>btn.addEventListener('click',()=>{const value=btn.dataset.filter;qa('[data-filter]').forEach(b=>{b.classList.toggle('is-active',b===btn);b.setAttribute('aria-pressed',String(b===btn))});qa('[data-gallery-category]').forEach(card=>{card.hidden=value!=='all'&&!((card.dataset.galleryCategory||'').split(/\s+/).includes(value))})}));

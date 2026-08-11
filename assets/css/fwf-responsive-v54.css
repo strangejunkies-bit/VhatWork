@@ -656,3 +656,152 @@ html{scroll-padding-top:calc(var(--fwf-header-desktop) + 12px)!important}
 
 /* v62 lightbox safe inset for tall device portfolios. */
 @media(min-width:821px){.lightbox .lightbox-stage>img{max-width:calc(100% - 28px)!important;max-height:calc(100% - 20px)!important}}
+
+
+/* v75 icon-control polish — remove boxy outlined utility buttons for a cleaner premium feel. */
+@media (max-width: 1280px){
+  .menu-toggle{
+    display:grid!important;
+    place-items:center!important;
+    width:46px!important;
+    height:46px!important;
+    padding:0!important;
+    border:0!important;
+    border-radius:999px!important;
+    background:rgba(255,255,255,.08)!important;
+    box-shadow:0 10px 26px rgba(0,0,0,.24)!important;
+    -webkit-backdrop-filter:blur(10px)!important;
+    backdrop-filter:blur(10px)!important;
+  }
+  .menu-toggle:hover,.menu-toggle:focus-visible{
+    background:var(--gold)!important;
+    box-shadow:0 14px 30px rgba(0,0,0,.28)!important;
+    outline:none!important;
+  }
+  .menu-toggle span{
+    width:18px!important;
+    height:2px!important;
+    margin:0!important;
+    border-radius:999px!important;
+    background:#fff!important;
+  }
+  .menu-toggle span + span{margin-top:5px!important}
+  .menu-toggle:hover span,.menu-toggle:focus-visible span,.menu-toggle[aria-expanded="true"] span{background:#090909!important}
+}
+
+.lightbox .lightbox-close,
+.lightbox .lightbox-prev,
+.lightbox .lightbox-next{
+  border:0!important;
+  border-radius:999px!important;
+  background:rgba(16,16,16,.76)!important;
+  color:#fff!important;
+  box-shadow:0 16px 40px rgba(0,0,0,.38)!important;
+  -webkit-backdrop-filter:blur(12px)!important;
+  backdrop-filter:blur(12px)!important;
+}
+.lightbox .lightbox-close{font-size:1.72rem!important}
+.lightbox .lightbox-prev,.lightbox .lightbox-next{font-size:1.18rem!important}
+.lightbox .lightbox-close:hover,.lightbox .lightbox-close:focus-visible,
+.lightbox .lightbox-prev:hover,.lightbox .lightbox-prev:focus-visible,
+.lightbox .lightbox-next:hover,.lightbox .lightbox-next:focus-visible{
+  background:var(--gold)!important;
+  color:#090909!important;
+  outline:none!important;
+}
+.lightbox .lightbox-count{
+  border:0!important;
+  border-radius:999px!important;
+  background:rgba(16,16,16,.72)!important;
+  color:#fff!important;
+  padding:10px 16px!important;
+  box-shadow:0 14px 34px rgba(0,0,0,.28)!important;
+  -webkit-backdrop-filter:blur(12px)!important;
+  backdrop-filter:blur(12px)!important;
+}
+
+
+/* v75 FINAL ICON CONTROL REFINEMENT — remove harsh outlined squares from mobile/header/viewer controls. */
+:root{--fwf-icon-surface:rgba(12,12,12,.78);--fwf-icon-surface-soft:rgba(255,255,255,.08);--fwf-icon-shadow:0 12px 36px rgba(0,0,0,.28)}
+.menu-toggle{
+  width:44px!important;height:44px!important;margin-left:auto!important;
+  border:0!important;border-radius:999px!important;
+  background:var(--fwf-icon-surface-soft)!important;color:#fff!important;
+  box-shadow:none!important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  transition:background .18s ease,color .18s ease,transform .18s ease,opacity .18s ease;
+}
+.menu-toggle span{width:20px!important;height:2px!important;margin:4px auto!important;border-radius:999px!important;background:#fff!important}
+.menu-toggle:hover,.menu-toggle:focus-visible,.menu-toggle[aria-expanded="true"]{
+  background:rgba(244,165,31,.18)!important;color:#fff!important;outline:none!important;box-shadow:none!important
+}
+.menu-toggle:focus-visible{outline:none!important}
+.lightbox .lightbox-close,
+.lightbox .lightbox-prev,
+.lightbox .lightbox-next{
+  display:grid!important;place-items:center!important;
+  border:0!important;border-radius:999px!important;
+  background:var(--fwf-icon-surface)!important;color:#fff!important;
+  box-shadow:var(--fwf-icon-shadow)!important;
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  transition:background .18s ease,color .18s ease,transform .18s ease,opacity .18s ease!important;
+}
+.lightbox .lightbox-close{width:46px!important;height:46px!important;font-size:1.55rem!important;line-height:1!important}
+.lightbox .lightbox-prev,.lightbox .lightbox-next{width:48px!important;height:48px!important;font-size:1.08rem!important;line-height:1!important}
+.lightbox .lightbox-close:hover,
+.lightbox .lightbox-close:focus-visible,
+.lightbox .lightbox-prev:hover,
+.lightbox .lightbox-prev:focus-visible,
+.lightbox .lightbox-next:hover,
+.lightbox .lightbox-next:focus-visible{
+  background:rgba(244,165,31,.96)!important;color:#090909!important;border-color:transparent!important;outline:none!important;box-shadow:0 14px 40px rgba(0,0,0,.34)!important
+}
+@media(max-width:620px){
+  .lightbox .lightbox-close{top:max(12px,env(safe-area-inset-top))!important;right:max(12px,env(safe-area-inset-right))!important}
+  .lightbox .lightbox-prev,.lightbox .lightbox-next{bottom:max(14px,env(safe-area-inset-bottom))!important}
+}
+
+
+/* v76 FINAL CONTROL CLEANUP — unify icon-only controls into one premium borderless system. */
+:root{--fwf-control-bg:rgba(18,18,18,.78);--fwf-control-bg-soft:rgba(255,255,255,.08);--fwf-control-bg-hover:rgba(244,165,31,.95);--fwf-control-fg:#fff;--fwf-control-fg-dark:#090909;--fwf-control-shadow:0 12px 34px rgba(0,0,0,.28)}
+.menu-toggle,
+.rail-arrow,
+.lightbox .lightbox-close,
+.lightbox .lightbox-prev,
+.lightbox .lightbox-next{
+  border:0!important;
+  outline:none!important;
+  box-shadow:var(--fwf-control-shadow)!important;
+  border-radius:999px!important;
+  -webkit-appearance:none;appearance:none;
+  transition:background .18s ease,color .18s ease,transform .18s ease,opacity .18s ease,box-shadow .18s ease!important;
+}
+.menu-toggle{
+  width:44px!important;height:44px!important;
+  background:var(--fwf-control-bg-soft)!important;color:var(--fwf-control-fg)!important;
+  box-shadow:none!important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.menu-toggle span{width:20px!important;height:2px!important;margin:4px auto!important;border-radius:999px!important;background:#fff!important}
+.menu-toggle:hover,.menu-toggle:focus-visible,.menu-toggle[aria-expanded="true"],.menu-toggle:active{
+  background:rgba(244,165,31,.18)!important;color:#fff!important;box-shadow:none!important
+}
+.rail-arrow{
+  width:42px!important;height:42px!important;display:grid!important;place-items:center!important;
+  background:rgba(17,17,17,.06)!important;color:#111!important;box-shadow:none!important;font-size:1.02rem!important;
+}
+.rail-arrow:hover,.rail-arrow:focus-visible,.rail-arrow:active{
+  background:#111!important;color:#fff!important;transform:translateY(-1px)!important
+}
+.lightbox .lightbox-close,
+.lightbox .lightbox-prev,
+.lightbox .lightbox-next{
+  background:var(--fwf-control-bg)!important;color:var(--fwf-control-fg)!important;
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.lightbox .lightbox-close{width:46px!important;height:46px!important;font-size:1.52rem!important;line-height:1!important}
+.lightbox .lightbox-prev,.lightbox .lightbox-next{width:48px!important;height:48px!important;font-size:1.06rem!important;line-height:1!important}
+.lightbox .lightbox-close:hover,.lightbox .lightbox-close:focus-visible,.lightbox .lightbox-close:active,
+.lightbox .lightbox-prev:hover,.lightbox .lightbox-prev:focus-visible,.lightbox .lightbox-prev:active,
+.lightbox .lightbox-next:hover,.lightbox .lightbox-next:focus-visible,.lightbox .lightbox-next:active{
+  background:var(--fwf-control-bg-hover)!important;color:var(--fwf-control-fg-dark)!important;outline:none!important;border-color:transparent!important;box-shadow:0 14px 40px rgba(0,0,0,.34)!important
+}
+.lightbox .lightbox-close:focus,.lightbox .lightbox-prev:focus,.lightbox .lightbox-next:focus,.menu-toggle:focus,.rail-arrow:focus{outline:none!important}
