@@ -1,6 +1,6 @@
 /* Fresh Work Factory v84 — compact full-width new-client ticker on established asset path. */
 .home-client-offer{position:relative;width:100%;overflow:hidden;background:#0a0a0a;color:#fff;border:0}
-.home-client-offer:before{content:"";position:absolute;inset:0 0 auto;height:2px;background:linear-gradient(90deg,var(--gold),var(--pink));opacity:.9;pointer-events:none}
+.home-client-offer:before{content:none!important;display:none!important}
 .home-client-offer-inner{position:relative;z-index:1;width:100%;height:52px;margin:0;padding:0 clamp(18px,2.4vw,46px);display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:clamp(20px,2.7vw,44px)}
 .home-client-offer-lead{display:flex;align-items:center;gap:10px;min-width:max-content;white-space:nowrap;color:#fff;font-family:var(--fb)}
 .home-client-offer-lead span{color:#f2f2f2;font:700 .7rem/1 var(--fb);letter-spacing:.055em;text-transform:uppercase}.home-client-offer-lead strong{color:var(--gold);font:800 .96rem/1 var(--fb);letter-spacing:-.01em}

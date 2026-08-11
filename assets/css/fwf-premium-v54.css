@@ -697,49 +697,11 @@ html{scroll-padding-top:126px}
 
 /* v54 final homepage business-card printer polish — realistic UV flatbed proportions, cleaner fit, no extra controls. */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* v84 final carousel controls + identity selector, layered on the stable v80 geometry. */
-.work-rail-shell>.rail-actions{display:flex!important;align-items:center;justify-content:flex-end;gap:4px;margin-top:12px;min-height:34px}
+/* v86: clear carousel arrows on the stable v80 project geometry. */
+.work-rail-shell{position:relative}
+.work-rail-shell>.rail-actions{position:absolute;z-index:6;left:8px;right:8px;top:0;bottom:4px;display:flex!important;align-items:center;justify-content:space-between;gap:0;margin:0!important;min-height:0;pointer-events:none}
 .work-rail-shell>.rail-actions[hidden]{display:none!important}
-.work-rail-shell .rail-arrow{appearance:none;width:38px;height:34px;display:grid;place-items:center;padding:0;border:0!important;border-radius:0!important;background:transparent!important;color:#151515;box-shadow:none!important;font:700 1.25rem/1 var(--fb);cursor:pointer;transition:color .16s ease,transform .16s ease,opacity .16s ease}
-.work-rail-shell .rail-arrow:hover,.work-rail-shell .rail-arrow:focus-visible{color:var(--gold);transform:translateX(0);outline:2px solid var(--gold);outline-offset:1px}
-.work-rail-shell .rail-arrow:disabled{opacity:.25;cursor:default;transform:none}
-.design-proof .identity-group-card{scroll-snap-align:start;min-width:0;aspect-ratio:4/3;display:grid;grid-template-rows:minmax(0,1fr) 50px;overflow:hidden;background:#fff;border:1px solid rgba(10,10,10,.12)}
-.identity-main{width:100%;height:100%;min-height:0;display:grid;place-items:center;overflow:hidden;border:0;background:#ede9e1;padding:0;cursor:zoom-in}
-.identity-main img{display:block;width:auto;height:100%;max-width:100%;object-fit:contain;transition:opacity .16s ease,transform .16s ease}
-.identity-main.is-switching img{opacity:.35;transform:translateY(3px)}
-.identity-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));height:50px;border-top:1px solid rgba(10,10,10,.12);background:#f8f5ef}
-.identity-option{position:relative;min-width:0;border:0;border-right:1px solid rgba(10,10,10,.08);padding:4px;background:transparent;opacity:.58;cursor:pointer;transition:opacity .16s ease,background .16s ease}
-.identity-option:last-child{border-right:0}.identity-option img{width:100%;height:100%;object-fit:cover;object-position:center}
-.identity-option.is-active{opacity:1;background:#fff}.identity-option.is-active:after{content:"";position:absolute;left:6px;right:6px;bottom:0;height:3px;background:var(--gold)}
-.identity-option:hover,.identity-option:focus-visible{opacity:1;outline:2px solid var(--gold);outline-offset:-2px}
-@media(max-width:620px){.work-rail-shell>.rail-actions{margin-top:9px}.work-rail-shell .rail-arrow{width:42px;height:38px}.design-proof .identity-group-card{grid-template-rows:minmax(0,1fr) 46px}.identity-options{height:46px}}
+.work-rail-shell .rail-arrow{appearance:none;width:44px;height:54px;display:grid;place-items:center;padding:0;border:0!important;border-radius:0!important;background:rgba(245,241,232,.94)!important;color:#111;box-shadow:0 4px 16px rgba(0,0,0,.16)!important;font:800 1.35rem/1 var(--fb);cursor:pointer;pointer-events:auto;transition:color .16s ease,background .16s ease,opacity .16s ease,transform .16s ease}
+.work-rail-shell .rail-arrow:hover,.work-rail-shell .rail-arrow:focus-visible{color:#111;background:var(--gold)!important;outline:0;transform:scale(1.03)}
+.work-rail-shell .rail-arrow:disabled{opacity:.38;cursor:default;transform:none}
+@media(max-width:620px){.work-rail-shell>.rail-actions{left:5px;right:5px}.work-rail-shell .rail-arrow{width:40px;height:48px;font-size:1.25rem}}

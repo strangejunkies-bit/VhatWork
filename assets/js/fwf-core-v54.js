@@ -29,7 +29,7 @@
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMenu();const active=document.activeElement;if(active&&active.closest?.('.category-mega')){active.closest('.category-item')?.querySelector('.category-top-link')?.focus()}}});
   qa('[data-current-year]').forEach(el=>el.textContent=new Date().getFullYear());
   if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver'in window){
-    const targets=qa('.section-head,.service-row,.use-case,.step,.testimonial,.work-tile,.gallery-card,.category-card,.catalog-detail,.deep-link-grid>a,.split>.prose,.side-image,.service-spec');
+    const targets=qa('.section-head,.service-row,.use-case,.step,.testimonial,.work-tile,.identity-set-card,.gallery-card,.category-card,.web-showcase-card,.seo-proof-card,.account-entry-card,.account-entry-grid article,.catalog-detail,.deep-link-grid>a,.split>.prose,.side-image,.service-spec');
     targets.forEach(el=>el.classList.add('reveal'));
     const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in-view');io.unobserve(x.target)}}),{rootMargin:'0px 0px -7% 0px',threshold:.05});
     targets.forEach(el=>io.observe(el));

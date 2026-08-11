@@ -1,0 +1,209 @@
+/* Fresh Work Factory v87 — final interaction, geometry, and responsive polish. */
+:root{
+  --fwf-radius-control:12px;
+  --fwf-radius-card:18px;
+  --fwf-radius-media:16px;
+  --fwf-ease:cubic-bezier(.22,1,.36,1);
+  --fwf-shadow-soft:0 14px 40px rgba(18,16,12,.10);
+  --fwf-shadow-hover:0 20px 54px rgba(18,16,12,.15);
+}
+
+html{-webkit-text-size-adjust:100%}
+body{-webkit-tap-highlight-color:transparent;text-rendering:optimizeLegibility}
+button,a,input,select,textarea{touch-action:manipulation}
+
+/* Remove the stray dark rule between the service navigation and WELCOME10 strip. */
+.site-header{border-bottom:0!important;transition:background .28s var(--fwf-ease),box-shadow .28s var(--fwf-ease)!important}
+.category-shell{border-bottom:0!important;box-shadow:none!important}
+.home-client-offer{margin-top:0!important;border-top:0!important;box-shadow:none!important}
+.home-client-offer:before,.home-client-offer:after{content:none!important;display:none!important}
+
+/* Tactile but restrained controls: rounded rectangles, never pill-heavy. */
+.btn,.header-quote,.account-entry-actions .btn{
+  border-radius:var(--fwf-radius-control)!important;
+  transition:transform .22s var(--fwf-ease),background-color .22s var(--fwf-ease),border-color .22s var(--fwf-ease),color .22s var(--fwf-ease),box-shadow .22s var(--fwf-ease)!important;
+}
+.btn:hover,.header-quote:hover,.account-entry-actions .btn:hover{transform:translateY(-2px)}
+.btn:active,.header-quote:active,.account-entry-actions .btn:active{transform:translateY(0) scale(.985)}
+
+.field input,.field select,.field textarea{
+  border-radius:var(--fwf-radius-control)!important;
+  transition:border-color .2s var(--fwf-ease),box-shadow .2s var(--fwf-ease),background-color .2s var(--fwf-ease)!important;
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:0!important;
+  border-color:var(--gold)!important;
+  box-shadow:0 0 0 4px rgba(244,165,31,.16)!important;
+}
+
+/* Common content surfaces. Keep the approved layouts; soften only the geometry and motion. */
+.category-card,.web-showcase-card,.seo-proof-card,.account-entry-card{
+  border-radius:var(--fwf-radius-card)!important;
+  overflow:hidden;
+}
+.category-card,.web-showcase-card,.seo-proof-card{
+  transition:transform .28s var(--fwf-ease),box-shadow .28s var(--fwf-ease),border-color .28s var(--fwf-ease)!important;
+}
+@media(hover:hover){
+  .category-card:hover,.web-showcase-card:hover,.seo-proof-card:hover{transform:translateY(-4px);box-shadow:var(--fwf-shadow-hover)}
+}
+.gallery-card,.work-tile,.business-card-feature-image{
+  border-radius:var(--fwf-radius-media)!important;
+}
+.work-tile img,.gallery-card img,.web-project-strip-grid img{
+  transition:transform .34s var(--fwf-ease),filter .28s var(--fwf-ease)!important;
+}
+
+.account-entry-card{box-shadow:0 26px 70px rgba(0,0,0,.20)!important}
+.account-entry-grid{
+  border-radius:var(--fwf-radius-card);
+  overflow:hidden;
+}
+.account-entry-grid article{transition:background-color .22s var(--fwf-ease),transform .22s var(--fwf-ease)}
+@media(hover:hover){.account-entry-grid article:hover{background:#faf8f3}}
+.account-welcome-offer{border-radius:0 12px 12px 0}
+
+.mobile-quick a{border-radius:10px}
+.notice{border-radius:0 12px 12px 0}
+
+/* Clear carousel controls: soft floating controls, visible without becoming oversized boxes. */
+.work-rail-shell>.rail-actions{
+  left:10px!important;
+  right:10px!important;
+  top:0!important;
+  bottom:4px!important;
+  align-items:center!important;
+}
+.work-rail-shell .rail-arrow{
+  width:46px!important;
+  height:46px!important;
+  border:1px solid rgba(15,15,15,.10)!important;
+  border-radius:14px!important;
+  background:rgba(255,255,255,.88)!important;
+  color:#111!important;
+  box-shadow:0 8px 24px rgba(0,0,0,.16)!important;
+  -webkit-backdrop-filter:blur(14px) saturate(1.15);
+  backdrop-filter:blur(14px) saturate(1.15);
+  transition:transform .2s var(--fwf-ease),background-color .2s var(--fwf-ease),box-shadow .2s var(--fwf-ease),opacity .2s ease!important;
+}
+.work-rail-shell .rail-arrow:hover,.work-rail-shell .rail-arrow:focus-visible{
+  background:var(--gold)!important;
+  transform:scale(1.045)!important;
+  box-shadow:0 10px 28px rgba(0,0,0,.20)!important;
+}
+.work-rail-shell .rail-arrow:active{transform:scale(.96)!important}
+.work-rail-shell .rail-arrow:disabled{opacity:.28!important;transform:none!important}
+
+/* Graphic Design: one identity set per card, all 3 directions visible together at natural proportions. */
+.design-proof .identity-set-rail{
+  display:flex!important;
+  flex-wrap:nowrap!important;
+  gap:18px!important;
+  padding:4px 4px 10px!important;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  scroll-snap-type:x mandatory!important;
+  scroll-padding-inline:4px!important;
+}
+.design-proof .identity-set-card{
+  flex:0 0 82%!important;
+  max-width:980px;
+  min-width:0;
+  scroll-snap-align:start;
+  scroll-snap-stop:always;
+  padding:14px;
+  background:rgba(255,255,255,.92);
+  border:1px solid rgba(10,10,10,.10);
+  border-radius:var(--fwf-radius-card);
+  box-shadow:var(--fwf-shadow-soft);
+}
+.identity-set-head{
+  min-height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:2px 2px 12px;
+}
+.identity-set-head strong{
+  color:#111;
+  font:800 clamp(.94rem,1.35vw,1.12rem)/1.1 var(--fb);
+  letter-spacing:-.01em;
+}
+.identity-set-head span{
+  color:#777;
+  font:700 .68rem/1 var(--fb);
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.identity-direction-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  align-items:start;
+}
+.identity-direction{
+  min-width:0;
+  padding:0;
+  border:1px solid rgba(10,10,10,.09);
+  border-radius:14px;
+  overflow:hidden;
+  background:#f8f6f1;
+  cursor:zoom-in;
+  box-shadow:none;
+  transition:transform .24s var(--fwf-ease),box-shadow .24s var(--fwf-ease),border-color .24s var(--fwf-ease);
+}
+.identity-direction img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:396/680;
+  object-fit:contain;
+  object-position:center;
+  background:#f8f6f1;
+}
+@media(hover:hover){
+  .identity-direction:hover{transform:translateY(-3px);border-color:rgba(10,10,10,.18);box-shadow:0 12px 26px rgba(0,0,0,.12)}
+}
+.identity-direction:active{transform:scale(.992)}
+
+/* Modal controls match the same geometry while remaining obvious and accessible. */
+.lightbox-close,.lightbox-prev,.lightbox-next{
+  border-radius:14px!important;
+  transition:transform .2s var(--fwf-ease),background-color .2s var(--fwf-ease),color .2s var(--fwf-ease),border-color .2s var(--fwf-ease)!important;
+}
+.lightbox-close:active,.lightbox-prev:active,.lightbox-next:active{transform:scale(.96)}
+.lightbox-prev:active,.lightbox-next:active{transform:translateY(-50%) scale(.96)}
+
+/* Consistent keyboard focus without permanent heavy outlines. */
+:where(a,button,input,select,textarea):focus-visible{
+  outline:2px solid var(--gold);
+  outline-offset:3px;
+}
+
+@media(max-width:900px){
+  .design-proof .identity-set-card{flex-basis:90%!important;padding:12px}
+  .identity-direction-grid{gap:8px}
+  .work-rail-shell>.rail-actions{left:7px!important;right:7px!important}
+}
+@media(max-width:620px){
+  .design-proof .identity-set-card{flex-basis:94%!important;padding:10px;border-radius:16px}
+  .identity-set-head{min-height:38px;padding-bottom:9px;gap:10px}
+  .identity-set-head strong{font-size:.9rem}
+  .identity-set-head span{font-size:.61rem}
+  .identity-direction-grid{gap:6px}
+  .identity-direction{border-radius:10px}
+  .work-rail-shell .rail-arrow{width:42px!important;height:42px!important;border-radius:13px!important;font-size:1.18rem!important}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .btn,.header-quote,.account-entry-actions .btn,.category-card,.web-showcase-card,.seo-proof-card,.work-tile img,.gallery-card img,.web-project-strip-grid img,.identity-direction,.work-rail-shell .rail-arrow{transition:none!important;transform:none!important}
+}
+
+/* Match fixed-header offsets to the actual rendered header heights; prevents 1–4px separator gaps. */
+:root{--fwf-header-desktop:123px;--fwf-header-compact:72px;--fwf-header-phone:64px}
+.menu-toggle:focus-visible,.work-rail-shell .rail-arrow:focus-visible{outline:2px solid var(--gold)!important;outline-offset:3px!important}
+.menu-toggle{border-radius:10px!important}
+::-webkit-scrollbar-thumb{border-radius:8px!important}
+@media(max-width:620px){.lightbox-prev:active,.lightbox-next:active{transform:scale(.96)!important}}
