@@ -1,4 +1,0 @@
-/* Fresh Work Factory v56 — JD Tax project case-grid integration only. */
-@media (min-width:1280px){
-  .web-case-grid-v56{grid-template-columns:repeat(5,minmax(0,1fr))!important}
-}
