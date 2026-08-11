@@ -55,13 +55,13 @@
   const sync=value=>{
     const webOnly=value==='web-design';
     document.documentElement.classList.toggle('portfolio-web-filter-active',webOnly);
+    // v71 uses one approved 3:4 device composition per project everywhere.
+    // Never swap these back into old 16:9 canvas dimensions; that was the source of the bad crop/padding.
     webCards.forEach(card=>{
       const img=card.querySelector('img[data-web-device-src]');
       if(!img)return;
-      const next=webOnly?img.dataset.webDeviceSrc:img.dataset.webLandscapeSrc;
+      const next=img.dataset.webDeviceSrc;
       if(next&&img.getAttribute('src')!==next)img.setAttribute('src',next);
-      img.setAttribute('width',webOnly?'1086':'1200');
-      img.setAttribute('height',webOnly?'1448':'680');
     });
   };
   filters.forEach(btn=>btn.addEventListener('click',()=>sync(btn.dataset.filter)));
