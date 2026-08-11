@@ -66,56 +66,61 @@ button,a,input,select,textarea{touch-action:manipulation}
 .mobile-quick a{border-radius:10px}
 .notice{border-radius:0 12px 12px 0}
 
-/* Clear carousel controls: soft floating controls, visible without becoming oversized boxes. */
+/* Clear carousel controls: cleaner ghost-style controls with lighter visual weight. */
 .work-rail-shell>.rail-actions{
-  left:10px!important;
-  right:10px!important;
+  left:6px!important;
+  right:6px!important;
   top:0!important;
-  bottom:4px!important;
+  bottom:0!important;
   align-items:center!important;
 }
 .work-rail-shell .rail-arrow{
-  width:46px!important;
-  height:46px!important;
-  border:1px solid rgba(15,15,15,.10)!important;
-  border-radius:14px!important;
-  background:rgba(255,255,255,.88)!important;
+  width:36px!important;
+  height:36px!important;
+  border:0!important;
+  border-radius:999px!important;
+  background:transparent!important;
   color:#111!important;
-  box-shadow:0 8px 24px rgba(0,0,0,.16)!important;
-  -webkit-backdrop-filter:blur(14px) saturate(1.15);
-  backdrop-filter:blur(14px) saturate(1.15);
-  transition:transform .2s var(--fwf-ease),background-color .2s var(--fwf-ease),box-shadow .2s var(--fwf-ease),opacity .2s ease!important;
+  box-shadow:none!important;
+  -webkit-backdrop-filter:none;
+  backdrop-filter:none;
+  font-size:1.5rem!important;
+  line-height:1!important;
+  opacity:.86!important;
+  transition:transform .2s var(--fwf-ease),color .2s var(--fwf-ease),opacity .2s ease!important;
 }
 .work-rail-shell .rail-arrow:hover,.work-rail-shell .rail-arrow:focus-visible{
-  background:var(--gold)!important;
-  transform:scale(1.045)!important;
-  box-shadow:0 10px 28px rgba(0,0,0,.20)!important;
+  background:transparent!important;
+  color:var(--gold)!important;
+  opacity:1!important;
+  transform:translateY(-1px) scale(1.04)!important;
+  box-shadow:none!important;
 }
-.work-rail-shell .rail-arrow:active{transform:scale(.96)!important}
-.work-rail-shell .rail-arrow:disabled{opacity:.28!important;transform:none!important}
+.work-rail-shell .rail-arrow:active{transform:scale(.95)!important}
+.work-rail-shell .rail-arrow:disabled{opacity:.25!important;transform:none!important}
 
-/* Graphic Design: one identity set per card, all 3 directions visible together at natural proportions. */
+/* Graphic Design: show one identity set cleanly at a time, while keeping all 3 directions visible together. */
 .design-proof .identity-set-rail{
   display:flex!important;
   flex-wrap:nowrap!important;
-  gap:18px!important;
-  padding:4px 4px 10px!important;
+  gap:0!important;
+  padding:0 0 8px!important;
   overflow-x:auto!important;
   overflow-y:hidden!important;
   scroll-snap-type:x mandatory!important;
-  scroll-padding-inline:4px!important;
+  scroll-padding-inline:0!important;
 }
 .design-proof .identity-set-card{
-  flex:0 0 82%!important;
-  max-width:980px;
+  flex:0 0 100%!important;
+  max-width:none;
   min-width:0;
   scroll-snap-align:start;
   scroll-snap-stop:always;
-  padding:14px;
-  background:rgba(255,255,255,.92);
-  border:1px solid rgba(10,10,10,.10);
-  border-radius:var(--fwf-radius-card);
-  box-shadow:var(--fwf-shadow-soft);
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
 }
 .identity-set-head{
   min-height:42px;
@@ -123,7 +128,7 @@ button,a,input,select,textarea{touch-action:manipulation}
   align-items:center;
   justify-content:space-between;
   gap:18px;
-  padding:2px 2px 12px;
+  padding:0 0 12px;
 }
 .identity-set-head strong{
   color:#111;
@@ -140,19 +145,19 @@ button,a,input,select,textarea{touch-action:manipulation}
 .identity-direction-grid{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:10px;
+  gap:12px;
   align-items:start;
 }
 .identity-direction{
   min-width:0;
   padding:0;
-  border:1px solid rgba(10,10,10,.09);
-  border-radius:14px;
+  border:0!important;
+  border-radius:18px;
   overflow:hidden;
-  background:#f8f6f1;
+  background:transparent!important;
   cursor:zoom-in;
-  box-shadow:none;
-  transition:transform .24s var(--fwf-ease),box-shadow .24s var(--fwf-ease),border-color .24s var(--fwf-ease);
+  box-shadow:none!important;
+  transition:transform .24s var(--fwf-ease),opacity .24s var(--fwf-ease)!important;
 }
 .identity-direction img{
   display:block;
@@ -162,12 +167,12 @@ button,a,input,select,textarea{touch-action:manipulation}
   object-fit:contain;
   object-position:center;
   background:#f8f6f1;
+  border-radius:18px;
 }
 @media(hover:hover){
-  .identity-direction:hover{transform:translateY(-3px);border-color:rgba(10,10,10,.18);box-shadow:0 12px 26px rgba(0,0,0,.12)}
+  .identity-direction:hover{transform:translateY(-2px);opacity:.98}
 }
 .identity-direction:active{transform:scale(.992)}
-
 /* Modal controls match the same geometry while remaining obvious and accessible. */
 .lightbox-close,.lightbox-prev,.lightbox-next{
   border-radius:14px!important;
@@ -183,18 +188,18 @@ button,a,input,select,textarea{touch-action:manipulation}
 }
 
 @media(max-width:900px){
-  .design-proof .identity-set-card{flex-basis:90%!important;padding:12px}
-  .identity-direction-grid{gap:8px}
-  .work-rail-shell>.rail-actions{left:7px!important;right:7px!important}
+  .design-proof .identity-set-card{flex-basis:100%!important;padding:0!important}
+  .identity-direction-grid{gap:10px}
+  .work-rail-shell>.rail-actions{left:4px!important;right:4px!important}
 }
 @media(max-width:620px){
-  .design-proof .identity-set-card{flex-basis:94%!important;padding:10px;border-radius:16px}
+  .design-proof .identity-set-card{flex-basis:100%!important;padding:0!important;border-radius:0!important}
   .identity-set-head{min-height:38px;padding-bottom:9px;gap:10px}
   .identity-set-head strong{font-size:.9rem}
   .identity-set-head span{font-size:.61rem}
-  .identity-direction-grid{gap:6px}
-  .identity-direction{border-radius:10px}
-  .work-rail-shell .rail-arrow{width:42px!important;height:42px!important;border-radius:13px!important;font-size:1.18rem!important}
+  .identity-direction-grid{gap:8px}
+  .identity-direction,.identity-direction img{border-radius:12px}
+  .work-rail-shell .rail-arrow{width:32px!important;height:32px!important;border-radius:999px!important;font-size:1.32rem!important}
 }
 
 @media(prefers-reduced-motion:reduce){
@@ -207,3 +212,119 @@ button,a,input,select,textarea{touch-action:manipulation}
 .menu-toggle{border-radius:10px!important}
 ::-webkit-scrollbar-thumb{border-radius:8px!important}
 @media(max-width:620px){.lightbox-prev:active,.lightbox-next:active{transform:scale(.96)!important}}
+
+/* v88 — Graphic Design identity rail final polish.
+   Keep each 3-direction set intact, remove card-like separation,
+   show source artwork uncropped, and use transparent iOS-clean rail controls. */
+.design-proof .identity-rail-shell{
+  width:100%!important;
+  max-width:100%!important;
+  overflow:hidden!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+.design-proof .identity-set-rail{
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:100%!important;
+  gap:18px!important;
+  padding:0 0 6px!important;
+  background:transparent!important;
+}
+.design-proof .identity-set-card{
+  box-sizing:border-box!important;
+  flex:0 0 100%!important;
+  width:100%!important;
+  min-width:100%!important;
+  max-width:100%!important;
+  margin:0!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  overflow:visible!important;
+}
+.design-proof .identity-set-head{
+  display:none!important;
+}
+.design-proof .identity-direction-grid{
+  width:100%!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:10px!important;
+  align-items:start!important;
+}
+.design-proof .identity-direction{
+  width:100%!important;
+  min-width:0!important;
+  overflow:hidden!important;
+  border:0!important;
+  border-radius:16px!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.design-proof .identity-direction img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:transparent!important;
+  border-radius:16px!important;
+}
+.design-proof .identity-rail-shell>.rail-actions{
+  left:8px!important;
+  right:8px!important;
+  top:0!important;
+  bottom:6px!important;
+}
+.design-proof .identity-rail-shell .rail-arrow{
+  width:44px!important;
+  height:44px!important;
+  min-width:44px!important;
+  min-height:44px!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:#fff!important;
+  font-size:1.75rem!important;
+  font-weight:500!important;
+  text-shadow:0 1px 2px rgba(0,0,0,.85),0 0 8px rgba(0,0,0,.5)!important;
+  opacity:.9!important;
+  backdrop-filter:none!important;
+}
+@media(hover:hover){
+  .design-proof .identity-rail-shell .rail-arrow:hover,
+  .design-proof .identity-rail-shell .rail-arrow:focus-visible{
+    background:transparent!important;
+    color:var(--gold)!important;
+    opacity:1!important;
+    transform:translateY(-1px) scale(1.06)!important;
+    box-shadow:none!important;
+  }
+}
+.design-proof .identity-rail-shell .rail-arrow:active{
+  transform:scale(.92)!important;
+}
+.design-proof .identity-rail-shell .rail-arrow:disabled{
+  opacity:.18!important;
+}
+@media(max-width:620px){
+  .design-proof .identity-set-rail{gap:12px!important}
+  .design-proof .identity-direction-grid{gap:6px!important}
+  .design-proof .identity-direction,
+  .design-proof .identity-direction img{border-radius:11px!important}
+  .design-proof .identity-rail-shell>.rail-actions{left:2px!important;right:2px!important}
+  .design-proof .identity-rail-shell .rail-arrow{
+    width:44px!important;
+    height:44px!important;
+    min-width:44px!important;
+    min-height:44px!important;
+    font-size:1.55rem!important;
+  }
+}
