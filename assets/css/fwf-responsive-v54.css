@@ -653,3 +653,6 @@ html{scroll-padding-top:calc(var(--fwf-header-desktop) + 12px)!important}
 .lightbox .lightbox-close:focus-visible{background:var(--gold)!important;color:#090909!important;border-color:var(--gold)!important;outline:2px solid #fff!important;outline-offset:2px!important}
 
 /* Review separators live in premium CSS only. Responsive rules change columns, not borders. */
+
+/* v62 lightbox safe inset for tall device portfolios. */
+@media(min-width:821px){.lightbox .lightbox-stage>img{max-width:calc(100% - 28px)!important;max-height:calc(100% - 20px)!important}}

@@ -377,15 +377,12 @@ html{scrollbar-color:var(--gold) #111;scrollbar-width:thin}
 .google-review-count{margin-top:5px;color:#666;font-size:.9rem}
 .google-rating-panel a{display:inline-block;margin-top:12px;font-weight:800;font-size:.82rem;color:#111;text-decoration:none;border-bottom:1px solid #111;padding-bottom:2px}
 .google-rating-panel a:hover{color:var(--pink);border-color:var(--pink)}
-/* Google review separators: explicit desktop geometry so every divider is guaranteed. */
-.google-review-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;background:#fff;border:1px solid #b9b0a4}
-.google-review-card{grid-column:span 2;background:#fff;padding:24px;min-width:0;display:flex;flex-direction:column;min-height:285px;border:0;box-shadow:none;position:relative}
-.google-review-card:nth-child(n/**/+4){grid-column:span 3}
-/* Top row: two vertical separators + one continuous row separator. */
-.google-review-card:nth-child(1),.google-review-card:nth-child(2){border-right:1px solid #b9b0a4}
-.google-review-card:nth-child(-n+3){border-bottom:1px solid #b9b0a4}
-/* Bottom row: one center separator. The outer edge is owned by the grid border. */
-.google-review-card:nth-child(4){border-right:1px solid #b9b0a4}
+/* Google review separators: v62 single-border system restored from the approved v54 topology.
+   The grid owns only the top/left edges; every review card owns its right/bottom edge.
+   This produces every desktop, tablet and mobile divider without overlapping border systems. */
+.google-review-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;background:transparent;border:0;border-top:1px solid #b0a79a;border-left:1px solid #b0a79a}
+.google-review-card{grid-column:span 2;background:#fff;padding:24px;min-width:0;display:flex;flex-direction:column;min-height:285px;border:0;border-right:1px solid #b0a79a;border-bottom:1px solid #b0a79a;box-shadow:none}
+.google-review-card:nth-child(n+4){grid-column:span 3}
 .google-review-author{display:flex;align-items:center;gap:11px;margin-bottom:15px}
 .google-review-avatar{width:42px;height:42px;border-radius:50%;object-fit:cover;flex:0 0 auto;background:#eee;border:1px solid #ddd}
 .google-review-author-copy{min-width:0}
@@ -396,20 +393,18 @@ html{scrollbar-color:var(--gold) #111;scrollbar-width:thin}
 .google-review-text{margin:0;color:#505258;line-height:1.62;font-size:.9rem;flex:1}
 .google-review-source{display:inline-block;margin-top:17px;color:#111;font-size:.76rem;font-weight:800;text-decoration:none;border-bottom:1px solid #bbb;padding-bottom:2px;width:max-content;max-width:100%}
 .google-review-source:hover{border-color:var(--gold);color:#8a5a00}
-.google-review-skeleton{grid-column:span 2;min-height:250px;background:linear-gradient(90deg,#fff 0,#f0ede7 48%,#fff 100%);background-size:220% 100%;animation:googleReviewShimmer 1.25s ease-in-out infinite;border:0}
-.google-review-skeleton:nth-child(1),.google-review-skeleton:nth-child(2){border-right:1px solid #b9b0a4}
-.google-review-skeleton:nth-child(-n+3){border-bottom:1px solid #b9b0a4}
+.google-review-skeleton{grid-column:span 2;min-height:250px;background:linear-gradient(90deg,#fff 0,#f0ede7 48%,#fff 100%);background-size:220% 100%;animation:googleReviewShimmer 1.25s ease-in-out infinite;border:0;border-right:1px solid #b0a79a;border-bottom:1px solid #b0a79a}
 .google-reviews-footer{display:flex;align-items:flex-start;justify-content:space-between;gap:30px;padding-top:18px;color:#747474;font-size:.75rem;line-height:1.5}
 .google-reviews-footer p{margin:0;max-width:620px}
 .google-review-actions{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}
 .google-review-actions a{color:#111;font-weight:800;text-decoration:none;white-space:nowrap}
 .google-review-actions a:hover{color:var(--pink)}
-.google-reviews-error{grid-column:1/-1;background:#fff;padding:30px;border:0;text-align:center}
+.google-reviews-error{grid-column:1/-1;background:#fff;padding:30px;border:0;border-right:1px solid #b0a79a;border-bottom:1px solid #b0a79a;text-align:center}
 .google-reviews-error p{margin:0 0 12px;color:#555}
 .google-reviews-error a{font-weight:800;color:#111}
 @keyframes googleReviewShimmer{0%{background-position:100% 0}100%{background-position:-100% 0}}
-@media(max-width:960px){.google-reviews-head{grid-template-columns:1fr;gap:22px;align-items:start}.google-rating-panel{justify-self:start}.google-review-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.google-review-card,.google-review-card:nth-child(n/**/+4),.google-review-skeleton{grid-column:auto;border-right:0;border-bottom:1px solid #b9b0a4}.google-review-card:nth-child(odd),.google-review-skeleton:nth-child(odd){border-right:1px solid #b9b0a4}.google-review-card:last-child:nth-child(odd){grid-column:1/-1;border-right:0}.google-review-card:last-child,.google-review-skeleton:last-child{border-bottom:0}.google-reviews-footer{flex-direction:column}.google-review-actions{justify-content:flex-start}}
-@media(max-width:620px){.google-reviews-title h2{font-size:clamp(2.65rem,14vw,4.25rem)}.google-review-grid{grid-template-columns:1fr}.google-review-card,.google-review-card:nth-child(n/**/+4),.google-review-card:last-child:nth-child(odd),.google-review-skeleton{grid-column:auto;min-height:0;border-right:0!important;border-bottom:1px solid #b9b0a4}.google-review-card:last-child,.google-review-skeleton:last-child{border-bottom:0}.google-review-actions{display:grid;gap:10px}.google-review-card{padding:20px}}
+@media(max-width:960px){.google-reviews-head{grid-template-columns:1fr;gap:22px;align-items:start}.google-rating-panel{justify-self:start}.google-review-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.google-review-card,.google-review-card:nth-child(n+4),.google-review-skeleton{grid-column:auto;min-height:0}.google-review-card:last-child:nth-child(odd){grid-column:1/-1}.google-reviews-footer{flex-direction:column}.google-review-actions{justify-content:flex-start}}
+@media(max-width:620px){.google-reviews-title h2{font-size:clamp(2.65rem,14vw,4.25rem)}.google-review-grid{grid-template-columns:1fr}.google-review-card,.google-review-card:nth-child(n+4),.google-review-card:last-child:nth-child(odd),.google-review-skeleton{grid-column:auto;min-height:0}.google-review-actions{display:grid;gap:10px}.google-review-card{padding:20px}}
 @media(prefers-reduced-motion:reduce){.google-review-skeleton{animation:none;background:#f4f1eb}}
 
 
@@ -429,7 +424,7 @@ html{scrollbar-color:var(--gold) #111;scrollbar-width:thin}
 /* Review loading and interaction polish */
 .google-rating-line [data-google-rating]{font-variant-numeric:tabular-nums}
 .google-stars[aria-hidden="true"]{opacity:.35}
-.google-review-card{content-visibility:auto;contain-intrinsic-size:285px}
+
 .work-rail{scroll-padding-inline:1px}
 .work-tile{touch-action:pan-x pan-y}
 @media(prefers-reduced-motion:reduce){.home-work.is-filtering .work-rail{opacity:1!important;transform:none!important}}
