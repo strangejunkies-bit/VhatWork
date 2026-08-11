@@ -354,3 +354,11 @@
 .portfolio-grid .gallery-card[data-gallery-category~="web-design"] figcaption strong,.portfolio-web-filter-active .portfolio-grid .gallery-card[data-gallery-category~="web-design"] figcaption strong{display:block!important;color:#fff!important;font:800 .96rem/1.1 var(--ff)!important;text-transform:uppercase!important;order:initial!important}
 @media(max-width:1180px){.portfolio-web-filter-active .portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:620px){.portfolio-web-filter-active .portfolio-grid{grid-template-columns:1fr!important}}
+
+
+/* v80 homepage All Work normalization — Web Design tiles use the same box geometry as every other work tile. */
+.home-work .work-tile[data-work-category~="web-design"]{aspect-ratio:4/3!important;background:#111!important}
+.home-work .work-tile[data-work-category~="web-design"] img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;background:#111!important}
+@media(max-width:620px){
+  .home-work .work-tile[data-work-category~="web-design"]{aspect-ratio:4/3!important}
+}
