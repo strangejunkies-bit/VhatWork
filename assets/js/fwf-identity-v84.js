@@ -1,10 +1,1 @@
-(()=>{
-  const shell=document.querySelector('.design-proof .identity-rail-shell');
-  if(!shell)return;
-  requestAnimationFrame(()=>{
-    const prev=shell.querySelector('.rail-prev');
-    const next=shell.querySelector('.rail-next');
-    if(prev)prev.setAttribute('aria-label','Previous identity set');
-    if(next)next.setAttribute('aria-label','Next identity set');
-  });
-})();
+(()=>{const shell=document.querySelector('.design-proof .identity-rail-shell');if(!shell)return;const label=()=>{const p=shell.querySelector('.rail-prev'),n=shell.querySelector('.rail-next');if(p)p.setAttribute('aria-label','Previous identity board');if(n)n.setAttribute('aria-label','Next identity board')};requestAnimationFrame(label);setTimeout(label,80)})();
