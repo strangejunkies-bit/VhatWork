@@ -770,3 +770,16 @@ html{scroll-padding-top:calc(var(--fwf-header-desktop) + 12px)!important}
   .mobile-nav-backdrop.open{opacity:1;visibility:visible;pointer-events:auto;transition-delay:0s}
   body.menu-open{overflow:hidden!important;overscroll-behavior:none!important}
 }
+
+/* V1.0.4 final desktop header alignment: use the full black bar width while preserving the existing nav. */
+@media(min-width:1281px){
+  .header-main .header-inner{
+    width:100%!important;
+    max-width:none!important;
+    margin-left:0!important;
+    margin-right:0!important;
+    padding-left:clamp(28px,2.4vw,48px)!important;
+    padding-right:clamp(28px,2.4vw,48px)!important;
+    box-sizing:border-box!important;
+  }
+}
