@@ -300,3 +300,21 @@ button,a,input,select,textarea{touch-action:manipulation}
 @media(max-width:820px){.local-market-grid{grid-template-columns:1fr}.local-market-card{min-height:0}.ypsi-service-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.local-market-section{padding-top:18px!important}.local-market-grid{gap:12px}.local-market-card{padding:20px;border-radius:17px}.local-market-card h3{font-size:2.25rem}.ypsi-service-grid{grid-template-columns:1fr}.ypsi-service-card{min-height:0}}
 @media(prefers-reduced-motion:reduce){.local-market-card,.local-market-card .local-market-cta,.ypsi-service-card{transition:none!important;transform:none!important}}
+
+/* v96 — restore the proven v84 Brand Identity selector exactly: one identity set per card, three selectable directions. */
+.design-proof .identity-group-card{scroll-snap-align:start;min-width:0;aspect-ratio:4/3;display:grid;grid-template-rows:minmax(0,1fr) 50px;overflow:hidden;background:#fff;border:1px solid rgba(10,10,10,.12);border-radius:16px}
+.design-proof .identity-main{width:100%;height:100%;min-height:0;display:grid;place-items:center;overflow:hidden;border:0;background:#ede9e1;padding:0;cursor:zoom-in}
+.design-proof .identity-main img{display:block;width:auto;height:100%;max-width:100%;object-fit:contain;transition:opacity .16s ease,transform .16s ease}
+.design-proof .identity-main.is-switching img{opacity:.35;transform:translateY(3px)}
+.design-proof .identity-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));height:50px;border-top:1px solid rgba(10,10,10,.12);background:#f8f5ef}
+.design-proof .identity-option{position:relative;min-width:0;border:0;border-right:1px solid rgba(10,10,10,.08);padding:4px;background:transparent;opacity:.58;cursor:pointer;transition:opacity .16s ease,background .16s ease}
+.design-proof .identity-option:last-child{border-right:0}
+.design-proof .identity-option img{width:100%;height:100%;object-fit:cover;object-position:center}
+.design-proof .identity-option.is-active{opacity:1;background:#fff}
+.design-proof .identity-option.is-active:after{content:"";position:absolute;left:6px;right:6px;bottom:0;height:3px;background:var(--gold)}
+.design-proof .identity-option:hover,.design-proof .identity-option:focus-visible{opacity:1;outline:2px solid var(--gold);outline-offset:-2px}
+/* neutralize the later one-composite-per-full-width overrides on this section */
+.design-proof .work-rail.identity-set-rail{display:grid!important;grid-auto-flow:column!important;grid-auto-columns:clamp(300px,31vw,430px)!important;gap:14px!important;overflow-x:auto!important;scroll-snap-type:x mandatory!important}
+.design-proof .work-rail:not(.identity-set-rail){grid-auto-columns:clamp(300px,31vw,430px)!important}
+@media(max-width:900px){.design-proof .work-rail:not(.identity-set-rail){grid-auto-columns:min(82vw,420px)!important}}
+@media(max-width:620px){.design-proof .work-rail-shell>.rail-actions{margin-top:9px}.design-proof .work-rail-shell .rail-arrow{width:42px;height:38px}.design-proof .identity-group-card{grid-template-rows:minmax(0,1fr) 46px;border-radius:14px}.design-proof .identity-options{height:46px}.design-proof .work-rail:not(.identity-set-rail){grid-auto-columns:88vw!important;gap:10px!important}}
