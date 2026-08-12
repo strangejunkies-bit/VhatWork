@@ -862,12 +862,12 @@ button,a,input,select,textarea{touch-action:manipulation}
 }
 .design-proof .identity-board-rail::-webkit-scrollbar{display:none!important}
 .design-proof .identity-board-card{
-  scroll-snap-align:start!important;aspect-ratio:1200/680!important;min-width:0!important;margin:0!important;padding:0!important;
+  scroll-snap-align:start!important;aspect-ratio:auto!important;min-width:0!important;margin:0!important;padding:0!important;
   border:0!important;border-radius:8px!important;overflow:hidden!important;background:transparent!important;box-shadow:none!important
 }
 .design-proof .identity-board-card:after,.design-proof .identity-board-card .work-tile-copy{display:none!important;content:none!important}
 .design-proof .identity-board-card img{
-  display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;
+  display:block!important;width:100%!important;height:auto!important;object-fit:contain!important;object-position:center!important;
   border:0!important;border-radius:8px!important;background:transparent!important;transform:none!important;filter:none!important
 }
 .design-proof .identity-board-card:hover img,.design-proof .identity-board-card:focus-visible img{transform:none!important;filter:none!important}
@@ -876,10 +876,10 @@ button,a,input,select,textarea{touch-action:manipulation}
 
 /* The same cleaned identity boards in Our Work / Portfolio must show in full, never cover-cropped. */
 .work-tile.identity-work-tile,
-.gallery-card.identity-gallery-card{aspect-ratio:1200/680!important;background:transparent!important}
+.gallery-card.identity-gallery-card{aspect-ratio:auto!important;background:transparent!important}
 .work-tile.identity-work-tile img,
 .gallery-card.identity-gallery-card img{
-  width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;background:transparent!important;
+  width:100%!important;height:auto!important;object-fit:contain!important;object-position:center!important;background:transparent!important;
   transform:none!important;filter:none!important
 }
 .work-tile.identity-work-tile:after{display:none!important;content:none!important}
