@@ -213,118 +213,22 @@ button,a,input,select,textarea{touch-action:manipulation}
 ::-webkit-scrollbar-thumb{border-radius:8px!important}
 @media(max-width:620px){.lightbox-prev:active,.lightbox-next:active{transform:scale(.96)!important}}
 
-/* v88 — Graphic Design identity rail final polish.
-   Keep each 3-direction set intact, remove card-like separation,
-   show source artwork uncropped, and use transparent iOS-clean rail controls. */
-.design-proof .identity-rail-shell{
-  width:100%!important;
-  max-width:100%!important;
-  overflow:hidden!important;
-  padding:0!important;
-  background:transparent!important;
-  border:0!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-}
-.design-proof .identity-set-rail{
-  box-sizing:border-box!important;
-  width:100%!important;
-  max-width:100%!important;
-  gap:18px!important;
-  padding:0 0 6px!important;
-  background:transparent!important;
-}
-.design-proof .identity-set-card{
-  box-sizing:border-box!important;
-  flex:0 0 100%!important;
-  width:100%!important;
-  min-width:100%!important;
-  max-width:100%!important;
-  margin:0!important;
-  padding:0!important;
-  background:transparent!important;
-  border:0!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-  overflow:visible!important;
-}
-.design-proof .identity-set-head{
-  display:none!important;
-}
-.design-proof .identity-direction-grid{
-  width:100%!important;
-  grid-template-columns:repeat(3,minmax(0,1fr))!important;
-  gap:10px!important;
-  align-items:start!important;
-}
-.design-proof .identity-direction{
-  width:100%!important;
-  min-width:0!important;
-  overflow:hidden!important;
-  border:0!important;
-  border-radius:16px!important;
-  background:transparent!important;
-  box-shadow:none!important;
-}
-.design-proof .identity-direction img{
-  display:block!important;
-  width:100%!important;
-  height:auto!important;
-  aspect-ratio:auto!important;
-  object-fit:contain!important;
-  object-position:center!important;
-  background:transparent!important;
-  border-radius:16px!important;
-}
-.design-proof .identity-rail-shell>.rail-actions{
-  left:8px!important;
-  right:8px!important;
-  top:0!important;
-  bottom:6px!important;
-}
-.design-proof .identity-rail-shell .rail-arrow{
-  width:44px!important;
-  height:44px!important;
-  min-width:44px!important;
-  min-height:44px!important;
-  border:0!important;
-  border-radius:0!important;
-  background:transparent!important;
-  box-shadow:none!important;
-  color:#fff!important;
-  font-size:1.75rem!important;
-  font-weight:500!important;
-  text-shadow:0 1px 2px rgba(0,0,0,.85),0 0 8px rgba(0,0,0,.5)!important;
-  opacity:.9!important;
-  backdrop-filter:none!important;
-}
-@media(hover:hover){
-  .design-proof .identity-rail-shell .rail-arrow:hover,
-  .design-proof .identity-rail-shell .rail-arrow:focus-visible{
-    background:transparent!important;
-    color:var(--gold)!important;
-    opacity:1!important;
-    transform:translateY(-1px) scale(1.06)!important;
-    box-shadow:none!important;
-  }
-}
-.design-proof .identity-rail-shell .rail-arrow:active{
-  transform:scale(.92)!important;
-}
-.design-proof .identity-rail-shell .rail-arrow:disabled{
-  opacity:.18!important;
-}
-@media(max-width:620px){
-  .design-proof .identity-set-rail{gap:12px!important}
-  .design-proof .identity-direction-grid{gap:6px!important}
-  .design-proof .identity-direction,
-  .design-proof .identity-direction img{border-radius:11px!important}
-  .design-proof .identity-rail-shell>.rail-actions{left:2px!important;right:2px!important}
-  .design-proof .identity-rail-shell .rail-arrow{
-    width:44px!important;
-    height:44px!important;
-    min-width:44px!important;
-    min-height:44px!important;
-    font-size:1.55rem!important;
-  }
-}
+/* v91 final 3-up identity carousel: original approved composite artwork, no slicing/crop. */
+.design-proof .identity-rail-shell{width:100%!important;max-width:100%!important;position:relative!important;overflow:hidden!important;padding:0!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+.design-proof .identity-set-rail{width:100%!important;max-width:100%!important;gap:16px!important;padding:0!important;background:transparent!important;scroll-snap-type:x mandatory!important;scroll-padding:0!important}
+.design-proof .identity-composite-card{flex:0 0 100%!important;width:100%!important;min-width:100%!important;max-width:100%!important;margin:0!important;padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important;scroll-snap-align:start!important;scroll-snap-stop:always!important}
+.design-proof .identity-composite-button{display:block!important;width:100%!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;border-radius:18px!important;overflow:hidden!important;box-shadow:none!important;cursor:zoom-in!important}
+.design-proof .identity-composite-button img{display:block!important;width:100%!important;height:auto!important;max-width:100%!important;max-height:none!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;background:transparent!important;border-radius:18px!important;transform:none!important;filter:none!important}
+.design-proof .identity-rail-shell>.rail-actions{position:absolute!important;inset:0 6px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;pointer-events:none!important;z-index:4!important;margin:0!important;padding:0!important}
+.design-proof .identity-rail-shell>.rail-actions[hidden]{display:none!important}
+.design-proof .identity-rail-shell .rail-arrow{pointer-events:auto!important;width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;display:grid!important;place-items:center!important;margin:0!important;padding:0!important;border:0!important;border-radius:12px!important;background:transparent!important;color:#fff!important;box-shadow:none!important;backdrop-filter:none!important;font-size:1.7rem!important;font-weight:500!important;line-height:1!important;text-shadow:0 1px 3px rgba(0,0,0,.95),0 0 12px rgba(0,0,0,.65)!important;opacity:.9!important;transition:transform .16s ease,color .16s ease,opacity .16s ease!important}
+@media(hover:hover){.design-proof .identity-rail-shell .rail-arrow:hover,.design-proof .identity-rail-shell .rail-arrow:focus-visible{color:var(--gold)!important;opacity:1!important;transform:scale(1.08)!important;background:transparent!important;box-shadow:none!important}}
+.design-proof .identity-rail-shell .rail-arrow:active{transform:scale(.92)!important}.design-proof .identity-rail-shell .rail-arrow:disabled{opacity:.2!important}
+@media(max-width:620px){.design-proof .identity-set-rail{gap:10px!important}.design-proof .identity-composite-button,.design-proof .identity-composite-button img{border-radius:13px!important}.design-proof .identity-rail-shell>.rail-actions{inset:0 2px!important}.design-proof .identity-rail-shell .rail-arrow{font-size:1.5rem!important}}
+/* v91 CTA hierarchy: Portal gold, quote pink, mobile portal centered. */
+.utility-nav a[href^="https://account.freshworkfactory.com"]{height:38px!important;margin:0 5px!important;padding:0 14px!important;align-self:center!important;justify-content:center!important;background:var(--gold)!important;color:#090909!important;border:1px solid var(--gold)!important;border-radius:12px!important;font-weight:800!important;transition:transform .16s ease,filter .16s ease,box-shadow .16s ease!important}
+.utility-nav a[href^="https://account.freshworkfactory.com"]:hover,.utility-nav a[href^="https://account.freshworkfactory.com"]:focus-visible{color:#090909!important;transform:translateY(-1px)!important;filter:brightness(1.04)!important;box-shadow:0 7px 20px rgba(244,165,31,.16)!important}
+.header-quote{background:var(--pink)!important;border-color:var(--pink)!important;color:#fff!important;border-radius:12px!important;transition:transform .16s ease,filter .16s ease,box-shadow .16s ease!important}.header-quote:hover,.header-quote:focus-visible{background:var(--pink)!important;border-color:var(--pink)!important;color:#fff!important;transform:translateY(-1px)!important;filter:brightness(1.05)!important;box-shadow:0 7px 20px rgba(233,30,140,.18)!important}
+.mobile-nav>a[href^="https://account.freshworkfactory.com"]{display:flex!important;align-items:center!important;justify-content:center!important;width:min(100%,360px)!important;min-height:46px!important;margin:6px auto 14px!important;padding:0 18px!important;background:var(--gold)!important;color:#090909!important;border:1px solid var(--gold)!important;border-radius:14px!important;font-weight:900!important;text-align:center!important;box-shadow:0 8px 24px rgba(244,165,31,.12)!important;transition:transform .16s ease,filter .16s ease!important}.mobile-nav>a[href^="https://account.freshworkfactory.com"]:active{transform:scale(.98)!important}
+.mobile-quick a:last-child{background:var(--pink)!important;border-color:var(--pink)!important;color:#fff!important;border-radius:12px!important}.mobile-quick a:first-child{border-radius:12px!important}.site-footer a[href^="https://account.freshworkfactory.com"]{color:var(--gold)!important;font-weight:700!important}
+@media(prefers-reduced-motion:reduce){.utility-nav a[href^="https://account.freshworkfactory.com"],.header-quote,.mobile-nav>a[href^="https://account.freshworkfactory.com"],.design-proof .identity-rail-shell .rail-arrow{transition:none!important;transform:none!important}}
