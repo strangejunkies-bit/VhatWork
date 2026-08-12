@@ -753,3 +753,20 @@ html{scroll-padding-top:calc(var(--fwf-header-desktop) + 12px)!important}
   .mobile-nav,.mobile-nav-backdrop{transition:none!important}
 }
 
+/* V1.0.1 desktop drawer availability: keep the slide/glass menu accessible at every viewport width. */
+@media(min-width:1281px){
+  .menu-toggle{display:block!important;margin-left:0!important;flex:0 0 auto}
+  .mobile-nav{
+    display:block!important;position:fixed!important;top:var(--fwf-header-desktop)!important;left:0!important;right:auto!important;bottom:0!important;
+    width:min(32vw,430px)!important;max-width:430px!important;height:auto!important;max-height:calc(100dvh - var(--fwf-header-desktop))!important;
+    padding:20px 24px max(28px,env(safe-area-inset-bottom))!important;overflow-y:auto!important;overflow-x:hidden!important;overscroll-behavior:contain!important;
+    background:linear-gradient(180deg,rgba(15,15,15,.90),rgba(12,12,12,.78))!important;border:0!important;border-right:1px solid rgba(255,255,255,.13)!important;
+    box-shadow:28px 0 70px rgba(0,0,0,.38)!important;-webkit-backdrop-filter:blur(28px) saturate(145%)!important;backdrop-filter:blur(28px) saturate(145%)!important;
+    transform:translate3d(-104%,0,0)!important;opacity:0!important;visibility:hidden!important;pointer-events:none!important;
+    transition:transform .30s cubic-bezier(.22,.72,.18,1),opacity .20s ease,visibility 0s linear .30s!important;will-change:transform,opacity;z-index:2100!important
+  }
+  .mobile-nav.open{transform:translate3d(0,0,0)!important;opacity:1!important;visibility:visible!important;pointer-events:auto!important;transition-delay:0s!important}
+  .mobile-nav-backdrop{display:block!important;position:fixed;top:var(--fwf-header-desktop);left:0;right:0;bottom:0;background:rgba(0,0,0,.34);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .20s ease,visibility 0s linear .20s;z-index:2050}
+  .mobile-nav-backdrop.open{opacity:1;visibility:visible;pointer-events:auto;transition-delay:0s}
+  body.menu-open{overflow:hidden!important;overscroll-behavior:none!important}
+}
