@@ -1,24 +1,30 @@
 (()=>{
   const q=(s,r=document)=>r.querySelector(s),qa=(s,r=document)=>[...r.querySelectorAll(s)];
   const body=document.body,header=q('[data-header]'),toggle=q('.menu-toggle'),mobile=q('.mobile-nav');
-  // Keep the mobile drawer at the document root so iOS Safari cannot trap fixed positioning inside the sticky/backdrop-filter header.
+  let backdrop=null;
   if(mobile&&mobile.parentElement!==body)body.appendChild(mobile);
-  function closeMenu(){
-    if(!mobile||!toggle)return;
-    mobile.classList.remove('open');
-    toggle.setAttribute('aria-expanded','false');
-    toggle.setAttribute('aria-label','Open menu');
-    body.classList.remove('menu-open');
+  if(mobile){
+    backdrop=document.createElement('div');
+    backdrop.className='mobile-nav-backdrop';
+    backdrop.setAttribute('aria-hidden','true');
+    body.appendChild(backdrop);
   }
+  function setMenuState(open){
+    if(!mobile||!toggle)return;
+    mobile.classList.toggle('open',open);
+    backdrop?.classList.toggle('open',open);
+    toggle.setAttribute('aria-expanded',String(open));
+    toggle.setAttribute('aria-label',open?'Close menu':'Open menu');
+    mobile.setAttribute('aria-hidden',String(!open));
+    body.classList.toggle('menu-open',open);
+  }
+  function closeMenu(){setMenuState(false)}
   if(toggle&&mobile){
-    toggle.addEventListener('click',()=>{
-      const open=mobile.classList.toggle('open');
-      toggle.setAttribute('aria-expanded',String(open));
-      toggle.setAttribute('aria-label',open?'Close menu':'Open menu');
-      body.classList.toggle('menu-open',open);
-    });
+    setMenuState(false);
+    toggle.addEventListener('click',()=>setMenuState(!mobile.classList.contains('open')));
+    backdrop?.addEventListener('click',closeMenu);
     qa('.mobile-nav a').forEach(a=>a.addEventListener('click',closeMenu));
-    document.addEventListener('click',e=>{if(mobile.classList.contains('open')&&header&&!header.contains(e.target)&&!mobile.contains(e.target))closeMenu()});
+    document.addEventListener('click',e=>{if(mobile.classList.contains('open')&&header&&!header.contains(e.target)&&!mobile.contains(e.target)&&e.target!==backdrop)closeMenu()});
     const mq=matchMedia('(min-width:1281px)');
     const sync=e=>{if(e.matches)closeMenu()};
     mq.addEventListener?.('change',sync);
