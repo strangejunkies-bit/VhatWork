@@ -445,8 +445,8 @@
 
 /* The SharkSuites source is already the approved complete 1086x1448 device artwork.
    Never zoom, cover-crop, or offset it on dedicated project surfaces. */
-.web-showcase-card img[src*="sharksuites-devices-v1.png"],
-.web-project-strip-grid img[src*="sharksuites-devices-v1.png"]{
+.web-showcase-card img[src*="sharksuites-devices.png"],
+.web-project-strip-grid img[src*="sharksuites-devices.png"]{
   object-fit:contain!important;
   object-position:center!important;
   transform:none!important;
