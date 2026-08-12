@@ -225,10 +225,78 @@ button,a,input,select,textarea{touch-action:manipulation}
 @media(hover:hover){.design-proof .identity-rail-shell .rail-arrow:hover,.design-proof .identity-rail-shell .rail-arrow:focus-visible{color:var(--gold)!important;opacity:1!important;transform:scale(1.08)!important;background:transparent!important;box-shadow:none!important}}
 .design-proof .identity-rail-shell .rail-arrow:active{transform:scale(.92)!important}.design-proof .identity-rail-shell .rail-arrow:disabled{opacity:.2!important}
 @media(max-width:620px){.design-proof .identity-set-rail{gap:10px!important}.design-proof .identity-composite-button,.design-proof .identity-composite-button img{border-radius:13px!important}.design-proof .identity-rail-shell>.rail-actions{inset:0 2px!important}.design-proof .identity-rail-shell .rail-arrow{font-size:1.5rem!important}}
-/* v91 CTA hierarchy: Portal gold, quote pink, mobile portal centered. */
-.utility-nav a[href^="https://account.freshworkfactory.com"]{height:38px!important;margin:0 5px!important;padding:0 14px!important;align-self:center!important;justify-content:center!important;background:var(--gold)!important;color:#090909!important;border:1px solid var(--gold)!important;border-radius:12px!important;font-weight:800!important;transition:transform .16s ease,filter .16s ease,box-shadow .16s ease!important}
-.utility-nav a[href^="https://account.freshworkfactory.com"]:hover,.utility-nav a[href^="https://account.freshworkfactory.com"]:focus-visible{color:#090909!important;transform:translateY(-1px)!important;filter:brightness(1.04)!important;box-shadow:0 7px 20px rgba(244,165,31,.16)!important}
-.header-quote{background:var(--pink)!important;border-color:var(--pink)!important;color:#fff!important;border-radius:12px!important;transition:transform .16s ease,filter .16s ease,box-shadow .16s ease!important}.header-quote:hover,.header-quote:focus-visible{background:var(--pink)!important;border-color:var(--pink)!important;color:#fff!important;transform:translateY(-1px)!important;filter:brightness(1.05)!important;box-shadow:0 7px 20px rgba(233,30,140,.18)!important}
-.mobile-nav>a[href^="https://account.freshworkfactory.com"]{display:flex!important;align-items:center!important;justify-content:center!important;width:min(100%,360px)!important;min-height:46px!important;margin:6px auto 14px!important;padding:0 18px!important;background:var(--gold)!important;color:#090909!important;border:1px solid var(--gold)!important;border-radius:14px!important;font-weight:900!important;text-align:center!important;box-shadow:0 8px 24px rgba(244,165,31,.12)!important;transition:transform .16s ease,filter .16s ease!important}.mobile-nav>a[href^="https://account.freshworkfactory.com"]:active{transform:scale(.98)!important}
-.mobile-quick a:last-child{background:var(--pink)!important;border-color:var(--pink)!important;color:#fff!important;border-radius:12px!important}.mobile-quick a:first-child{border-radius:12px!important}.site-footer a[href^="https://account.freshworkfactory.com"]{color:var(--gold)!important;font-weight:700!important}
-@media(prefers-reduced-motion:reduce){.utility-nav a[href^="https://account.freshworkfactory.com"],.header-quote,.mobile-nav>a[href^="https://account.freshworkfactory.com"],.design-proof .identity-rail-shell .rail-arrow{transition:none!important;transform:none!important}}
+
+/* v93 FINAL CTA hierarchy: Client Portal pink, quote gold, matched geometry, mobile portal centered. */
+.utility-nav a[href^="https://account.freshworkfactory.com"]{
+  height:38px!important;min-height:38px!important;margin:0 5px!important;padding:0 14px!important;
+  display:flex!important;align-items:center!important;align-self:center!important;justify-content:center!important;
+  background:var(--pink)!important;color:#fff!important;border:1px solid var(--pink)!important;
+  border-radius:12px!important;font-weight:900!important;line-height:1!important;
+  transition:transform .16s ease,filter .16s ease,box-shadow .16s ease!important
+}
+.utility-nav a[href^="https://account.freshworkfactory.com"]:after{display:none!important}
+.utility-nav a[href^="https://account.freshworkfactory.com"]:hover,
+.utility-nav a[href^="https://account.freshworkfactory.com"]:focus-visible{
+  color:#fff!important;transform:translateY(-1px)!important;filter:brightness(1.045)!important;
+  box-shadow:0 7px 20px rgba(233,30,140,.20)!important
+}
+.header-quote{
+  min-height:38px!important;display:flex!important;align-items:center!important;justify-content:center!important;
+  background:var(--gold)!important;border-color:var(--gold)!important;color:#090909!important;
+  border-radius:12px!important;transition:transform .16s ease,filter .16s ease,box-shadow .16s ease!important
+}
+.header-quote:hover,.header-quote:focus-visible{
+  background:var(--gold)!important;border-color:var(--gold)!important;color:#090909!important;
+  transform:translateY(-1px)!important;filter:brightness(1.04)!important;
+  box-shadow:0 7px 20px rgba(244,165,31,.18)!important
+}
+.mobile-nav>a[href^="https://account.freshworkfactory.com"]{
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  width:min(100% - 20px,360px)!important;min-height:48px!important;margin:8px auto 15px!important;padding:0 20px!important;
+  background:var(--pink)!important;color:#fff!important;border:1px solid var(--pink)!important;
+  border-radius:14px!important;font-weight:900!important;text-align:center!important;
+  box-shadow:0 9px 26px rgba(233,30,140,.18)!important;
+  transition:transform .16s ease,filter .16s ease,box-shadow .16s ease!important
+}
+.mobile-nav>a[href^="https://account.freshworkfactory.com"]:hover,
+.mobile-nav>a[href^="https://account.freshworkfactory.com"]:focus-visible{
+  color:#fff!important;filter:brightness(1.045)!important;box-shadow:0 11px 30px rgba(233,30,140,.22)!important
+}
+.mobile-nav>a[href^="https://account.freshworkfactory.com"]:active{transform:scale(.985)!important}
+.mobile-quick a{border-radius:12px!important}
+.mobile-quick a:last-child{background:var(--gold)!important;border-color:var(--gold)!important;color:#090909!important}
+.site-footer a[href^="https://account.freshworkfactory.com"]{color:var(--pink)!important;font-weight:800!important}
+@media(prefers-reduced-motion:reduce){
+  .utility-nav a[href^="https://account.freshworkfactory.com"],.header-quote,
+  .mobile-nav>a[href^="https://account.freshworkfactory.com"],.design-proof .identity-rail-shell .rail-arrow{
+    transition:none!important;transform:none!important
+  }
+}
+
+
+/* ========================================================================== 
+   v94 LOCAL MARKET / YPSILANTI SEO PRESENTATION
+   Strong local emphasis without implying a second physical storefront.
+   ========================================================================== */
+.local-market-section{padding-top:28px!important;padding-bottom:28px!important}
+.local-market-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:20px}
+.local-market-card{position:relative;display:flex;flex-direction:column;min-height:230px;padding:26px;border:1px solid rgba(10,10,10,.12);border-radius:20px;background:#fff;overflow:hidden;box-shadow:0 12px 34px rgba(10,10,10,.06);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.local-market-card:before{content:"";position:absolute;inset:0 auto 0 0;width:5px;background:var(--gold)}
+.local-market-card--ypsi:before{background:var(--pink)}
+.local-market-card .local-market-kicker{font-family:"Barlow Condensed",sans-serif;font-size:.78rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:#666}
+.local-market-card h3{margin:7px 0 8px;font-family:"Barlow Condensed",sans-serif;font-size:clamp(2rem,3.5vw,3.15rem);line-height:.94;text-transform:uppercase;color:#0a0a0a}
+.local-market-card--ypsi h3{color:var(--pink)}
+.local-market-card p{margin:0 0 18px;max-width:58ch;color:#4b4b4b;line-height:1.55}
+.local-market-card .local-market-tags{display:flex;flex-wrap:wrap;gap:7px;margin:auto 0 18px}
+.local-market-card .local-market-tags span{display:inline-flex;align-items:center;min-height:28px;padding:4px 9px;border:1px solid rgba(10,10,10,.10);border-radius:999px;background:#f7f5f0;font-size:.78rem;font-weight:700;color:#242424}
+.local-market-card .local-market-cta{display:inline-flex;align-items:center;gap:8px;width:max-content;min-height:42px;padding:0 14px;border-radius:12px;background:#0a0a0a;color:#fff;font-weight:800;text-decoration:none;transition:transform .16s ease,background .16s ease,color .16s ease}
+.local-market-card--ypsi .local-market-cta{background:var(--pink)}
+.local-market-card .local-market-cta:hover,.local-market-card .local-market-cta:focus-visible{transform:translateY(-1px)}
+.local-market-card--ypsi .local-market-cta:hover,.local-market-card--ypsi .local-market-cta:focus-visible{background:#cf167b;color:#fff}
+@media(hover:hover){.local-market-card:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(10,10,10,.09);border-color:rgba(10,10,10,.18)}}
+.local-seo-note{margin-top:18px;padding:15px 18px;border:1px solid rgba(10,10,10,.10);border-radius:15px;background:#f7f5f0;color:#3d3d3d;line-height:1.55}.local-seo-note strong{color:#0a0a0a}
+.home-hero-note a{color:inherit;font-weight:800;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}.home-hero-note a:hover,.home-hero-note a:focus-visible{color:var(--pink)}
+.ypsi-service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}.ypsi-service-card{display:flex;flex-direction:column;min-height:190px;padding:20px;border:1px solid rgba(10,10,10,.12);border-radius:17px;background:#fff;text-decoration:none;color:#0a0a0a;transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}.ypsi-service-card span{font-family:"Barlow Condensed",sans-serif;font-size:.76rem;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:var(--pink)}.ypsi-service-card h3{margin:7px 0 8px;font-size:1.24rem}.ypsi-service-card p{margin:0;color:#555;line-height:1.48}.ypsi-service-card b{margin-top:auto;padding-top:15px;font-size:.86rem}.ypsi-service-card:hover,.ypsi-service-card:focus-visible{transform:translateY(-2px);border-color:rgba(233,30,140,.38);box-shadow:0 12px 28px rgba(10,10,10,.07)}
+@media(max-width:820px){.local-market-grid{grid-template-columns:1fr}.local-market-card{min-height:0}.ypsi-service-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.local-market-section{padding-top:18px!important}.local-market-grid{gap:12px}.local-market-card{padding:20px;border-radius:17px}.local-market-card h3{font-size:2.25rem}.ypsi-service-grid{grid-template-columns:1fr}.ypsi-service-card{min-height:0}}
+@media(prefers-reduced-motion:reduce){.local-market-card,.local-market-card .local-market-cta,.ypsi-service-card{transition:none!important;transform:none!important}}
