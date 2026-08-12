@@ -592,6 +592,7 @@ button,a,input,select,textarea{touch-action:manipulation}
   grid-auto-flow:column!important;
   grid-auto-columns:calc((100% - 16px)/2)!important;
   gap:16px!important;
+  align-items:start!important;
   overflow-x:auto!important;
   overflow-y:hidden!important;
   scroll-snap-type:x mandatory!important;
@@ -605,7 +606,7 @@ button,a,input,select,textarea{touch-action:manipulation}
 .design-proof .identity-board{
   scroll-snap-align:start!important;
   scroll-snap-stop:always!important;
-  aspect-ratio:1200/680!important;
+  aspect-ratio:auto!important;
   min-width:0!important;
   margin:0!important;
   padding:0!important;
@@ -620,7 +621,7 @@ button,a,input,select,textarea{touch-action:manipulation}
 .design-proof .identity-board img{
   display:block!important;
   width:100%!important;
-  height:100%!important;
+  height:auto!important;
   max-width:100%!important;
   object-fit:contain!important;
   object-position:center!important;
