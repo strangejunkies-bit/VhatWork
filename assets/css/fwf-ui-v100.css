@@ -808,3 +808,91 @@ button,a,input,select,textarea{touch-action:manipulation}
 .btn,.category-card,.web-showcase-card,.seo-proof-card,.account-entry-card{border-radius:8px!important}
 .work-tile,.gallery-card,.work-tile img,.gallery-card img{border-radius:8px!important}
 @media(max-width:620px){.btn,.category-card,.web-showcase-card,.seo-proof-card,.account-entry-card,.work-tile,.gallery-card,.work-tile img,.gallery-card img{border-radius:6px!important}}
+
+
+/* ==========================================================================
+   v100 FINAL — clean identity triptychs + text-only header actions
+   ========================================================================== */
+
+/* Header actions: never render as filled pills at any desktop/tablet width. */
+.utility-nav a[href^="https://account.freshworkfactory.com"],
+.header-quote{
+  position:relative!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  filter:none!important;
+  transform:none!important;
+}
+.utility-nav a[href^="https://account.freshworkfactory.com"]{
+  color:#fff!important;
+  padding-left:.66rem!important;
+  padding-right:.66rem!important;
+}
+.header-quote{color:var(--gold)!important}
+.utility-nav a[href^="https://account.freshworkfactory.com"]:before,
+.header-quote:before{display:none!important;content:none!important}
+.utility-nav a[href^="https://account.freshworkfactory.com"]:after,
+.header-quote:after{
+  content:""!important;position:absolute!important;left:.66rem!important;right:.66rem!important;bottom:8px!important;height:1px!important;
+  background:currentColor!important;border:0!important;border-radius:0!important;opacity:0!important;transform:scaleX(.7)!important;
+  transition:opacity .16s ease,transform .16s ease!important
+}
+.utility-nav a[href^="https://account.freshworkfactory.com"]:hover,
+.utility-nav a[href^="https://account.freshworkfactory.com"]:focus-visible,
+.header-quote:hover,.header-quote:focus-visible{
+  background:transparent!important;box-shadow:none!important;filter:none!important;transform:none!important
+}
+.utility-nav a[href^="https://account.freshworkfactory.com"]:hover:after,
+.utility-nav a[href^="https://account.freshworkfactory.com"]:focus-visible:after,
+.header-quote:hover:after,.header-quote:focus-visible:after{opacity:.9!important;transform:scaleX(1)!important}
+
+/* Mobile menu uses the same quiet hierarchy: text + separators only. */
+.mobile-nav>a[href^="https://account.freshworkfactory.com"],
+.mobile-quick a{
+  border-radius:0!important;background:transparent!important;box-shadow:none!important;transform:none!important
+}
+
+/* Identity carousel: one complete 3-direction board per item, like Our Work, never sliced. */
+.design-proof .identity-rail-shell{position:relative!important;overflow:hidden!important;border:0!important;background:transparent!important;box-shadow:none!important}
+.design-proof .identity-board-rail{
+  display:grid!important;grid-auto-flow:column!important;grid-auto-columns:minmax(480px,58%)!important;gap:14px!important;
+  overflow-x:auto!important;overflow-y:hidden!important;scroll-snap-type:x mandatory!important;scrollbar-width:none!important;padding:0 0 4px!important
+}
+.design-proof .identity-board-rail::-webkit-scrollbar{display:none!important}
+.design-proof .identity-board-card{
+  scroll-snap-align:start!important;aspect-ratio:1200/680!important;min-width:0!important;margin:0!important;padding:0!important;
+  border:0!important;border-radius:8px!important;overflow:hidden!important;background:transparent!important;box-shadow:none!important
+}
+.design-proof .identity-board-card:after,.design-proof .identity-board-card .work-tile-copy{display:none!important;content:none!important}
+.design-proof .identity-board-card img{
+  display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;
+  border:0!important;border-radius:8px!important;background:transparent!important;transform:none!important;filter:none!important
+}
+.design-proof .identity-board-card:hover img,.design-proof .identity-board-card:focus-visible img{transform:none!important;filter:none!important}
+@media(max-width:900px){.design-proof .identity-board-rail{grid-auto-columns:84%!important;gap:10px!important}}
+@media(max-width:620px){.design-proof .identity-board-rail{grid-auto-columns:94%!important;gap:9px!important}.design-proof .identity-board-card,.design-proof .identity-board-card img{border-radius:6px!important}}
+
+/* The same cleaned identity boards in Our Work / Portfolio must show in full, never cover-cropped. */
+.work-tile.identity-work-tile,
+.gallery-card.identity-gallery-card{aspect-ratio:1200/680!important;background:transparent!important}
+.work-tile.identity-work-tile img,
+.gallery-card.identity-gallery-card img{
+  width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;background:transparent!important;
+  transform:none!important;filter:none!important
+}
+.work-tile.identity-work-tile:after{display:none!important;content:none!important}
+.work-tile.identity-work-tile:hover img,
+.gallery-card.identity-gallery-card:hover img{transform:none!important;filter:none!important}
+
+/* Full-size identity lightbox: always show the complete cleaned triptych. */
+.lightbox .lightbox-stage>img[src*="/assets/images/portfolio/brand-identity-"]{
+  width:auto!important;height:auto!important;max-width:min(1200px,calc(100vw - 140px))!important;max-height:calc(100dvh - 116px)!important;
+  object-fit:contain!important;object-position:center!important;background:transparent!important
+}
+@media(max-width:820px){.lightbox .lightbox-stage>img[src*="/assets/images/portfolio/brand-identity-"]{max-width:100%!important;max-height:100%!important}}
+
+@media(prefers-reduced-motion:reduce){
+  .utility-nav a[href^="https://account.freshworkfactory.com"]:after,.header-quote:after{transition:none!important}
+}

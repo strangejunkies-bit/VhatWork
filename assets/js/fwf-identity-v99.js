@@ -1,1 +1,0 @@
-(()=>{const shell=document.querySelector('.design-proof .identity-rail-shell');if(!shell)return;const label=()=>{const p=shell.querySelector('.rail-prev'),n=shell.querySelector('.rail-next');if(p)p.setAttribute('aria-label','Previous identity board');if(n)n.setAttribute('aria-label','Next identity board')};requestAnimationFrame(label);setTimeout(label,80)})();
